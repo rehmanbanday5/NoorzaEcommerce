@@ -1,8 +1,5 @@
 import {v2 as cloudinary} from 'cloudinary';
 
-
-
-
 // Function for add product 
 
 const addProduct = async (req, res) => {
@@ -18,27 +15,13 @@ const addProduct = async (req, res) => {
         const images = [image1, image2, image3, image4].filter((item) => item !== undefined)
 
         let imagesUrl = await Promise.all(
-            images.map(async (item) =>{
-                    console.log("IMAGE PATH:", item.path);
-             try {
-    console.log("Uploading:", item.path);
-
-    const result = await cloudinary.uploader.upload(item.path, {
-        resource_type: "image"
-    });
-
-    console.log("UPLOAD SUCCESS:", result.secure_url);
-
-    return result.secure_url;
-
-} catch (err) {
-
-    console.log("FULL ERROR:");
-    console.log(err);
-
-    throw err;
-}
-                return result.secure_url
+            images.map(async (item) => {
+                console.log("Uploading:", item.path);
+                const result = await cloudinary.uploader.upload(item.path, {
+                    resource_type: "image"
+                });
+                console.log("UPLOAD SUCCESS:", result.secure_url);
+                return result.secure_url;
             })
         )
 

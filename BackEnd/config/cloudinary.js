@@ -15,7 +15,8 @@ const connectCloudinary = async () => {
     api_key: apiKey,
     api_secret: apiSecret,
   });
-  console.log("Cloudinary Config:", cloudinary.config());
+
+  console.log("Cloudinary connected. Cloud name:", cloudName, "| API Key loaded:", !!apiKey, "| Secret loaded:", !!apiSecret);
 };
 
 export default connectCloudinary;
