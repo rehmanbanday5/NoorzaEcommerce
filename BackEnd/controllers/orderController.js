@@ -1,7 +1,8 @@
 import orderModel from '../models/orderModel.js'
 import userModel from "../models/userModel.js";
+import transporter from "../config/nodemailer.js";
 
-// Placing order using COD Method
+// ------------------------------ Placing order using COD Method ----------------------------------------------
 
 const placeOrder = async (req,res) => {
     try {
@@ -20,6 +21,43 @@ const placeOrder = async (req,res) => {
 
         const newOrder = new orderModel(orderData)
         await newOrder.save()
+
+        // For Email notification when new order 
+
+        await transporter.sendMail({
+          from: process.env.EMAIL_USER,
+          to: process.env.EMAIL_USER,
+          subject: "🛒 New Order Received - Noorza",
+          html: `
+    <h2>New Order Received</h2>
+
+    <p><strong>Customer:</strong> ${address.firstName} ${address.lastName}</p>
+    <p><strong>Email:</strong> ${address.email}</p>
+    <p><strong>Phone:</strong> ${address.phone}</p>
+    <p><strong>Address:</strong> ${address.street}, ${address.city}</p>
+
+    <h3>Products</h3>
+
+    ${items
+      .map(
+        (item) => `
+      <p>
+        ${item.name}<br/>
+        Size: ${item.size}<br/>
+        Quantity: ${item.quantity}<br/>
+        Price: Rs ${item.price}
+      </p>
+      <hr/>
+    `,
+      )
+      .join("")}
+
+    <h3>Total: Rs ${amount}</h3>
+  `,
+        });
+
+
+        // ------------------------------------------------------------------------------------
 
         await userModel.findByIdAndUpdate(userId,{cartData:{}})
         res.json({success:true, message:'Order Placed'})
