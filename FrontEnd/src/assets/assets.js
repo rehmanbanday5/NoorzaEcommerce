@@ -1,24 +1,24 @@
 // Mine Noorza
-import product_1 from './product_1.png'
-import product_2 from './product_2.png'
-import product_3 from './product_3.png'
-import product_4 from './product_4.png'
-import product_5 from './product_5.png'
-import product_6 from './product_6.png'
-import product_7 from './product_7.png'
-import product_8 from './product_8.png'
-import product_9 from './product_9.png'
-import product_10 from './product_10.png'
-import product_11 from './product_11.png'
-import product_12 from './product_12.png'
-import product_13 from './product_13.png'
-import product_14 from './product_14.png'
-import product_15 from './product_15.png'
-import product_16 from './product_16.png'
-import product_17 from './product_17.png'
-import product_18 from './product_18.png'
-import product_19 from './product_19.png'
-import product_20 from './product_20.png'
+import Product_1 from './Product_1.png'
+import Product_2 from './Product_2.png'
+import Product_3 from './Product_3.png'
+import Product_4 from './Product_4.png'
+import Product_5 from './Product_5.png'
+import Product_6 from './Product_6.png'
+import Product_7 from './Product_7.png'
+import Product_8 from './Product_8.png'
+import Product_9 from './Product_9.png'
+import Product_10 from './Product_10.png'
+import Product_11 from './Product_11.png'
+import Product_12 from './Product_12.png'
+import Product_13 from './Product_13.png'
+import Product_14 from './Product_14.png'
+import Product_15 from './Product_15.png'
+import Product_16 from './Product_16.png'
+import Product_17 from './Product_17.png'
+import Product_18 from './Product_18.png'
+import Product_19 from './Product_19.png'
+import Product_20 from './Product_20.png'
 
 
 
@@ -45,26 +45,26 @@ import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
 
 export const assets = {
-  product_1,
-  product_2,
-  product_3,
-  product_4,
-  product_5,
-  product_6,
-  product_7,
-  product_8,
-  product_9,
-  product_10,
-  product_11,
-  product_12,
-  product_13,
-  product_14,
-  product_15,
-  product_16,
-  product_17,
-  product_18,
-  product_19,
-  product_20,
+  Product_1,
+  Product_2,
+  Product_3,
+  Product_4,
+  Product_5,
+  Product_6,
+  Product_7,
+  Product_8,
+  Product_9,
+  Product_10,
+  Product_11,
+  Product_12,
+  Product_13,
+  Product_14,
+  Product_15,
+  Product_16,
+  Product_17,
+  Product_18,
+  Product_19,
+  Product_20,
   Noorza,
   Delivery,
   Privacy,
@@ -95,7 +95,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 50,
-    image: [product_15],
+    image: [Product_15],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "M", "L"],
@@ -108,7 +108,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 110,
-    image: [product_10],
+    image: [Product_10],
     category: "Bra",
     subCategory: "Everyday Wear",
     sizes: ["S", "L", "XL"],
@@ -121,7 +121,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 200,
-    image: [product_2],
+    image: [Product_2],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["M", "L", "XL"],
@@ -134,7 +134,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 140,
-    image: [product_1],
+    image: [Product_1],
     category: "Bra",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -147,7 +147,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 110,
-    image: [product_4],
+    image: [Product_4],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "M", "XXL"],
@@ -160,7 +160,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 150,
-    image: [product_17],
+    image: [Product_17],
     category: "Bra",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -173,7 +173,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 140,
-    image: [product_6],
+    image: [Product_6],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "L", "XL"],
@@ -186,7 +186,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 180,
-    image: [product_18],
+    image: [Product_18],
     category: "Bra",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -199,7 +199,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 140,
-    image: [product_8],
+    image: [Product_8],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "M", "L", "XL"],
@@ -212,7 +212,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 160,
-    image: [product_19],
+    image: [Product_19],
     category: "Bra",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -225,7 +225,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 120,
-    image: [product_11],
+    image: [Product_11],
     category: "Lingerie",
     subCategory: "Lace",
     sizes: ["S", "M", "L"],
@@ -238,7 +238,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 150,
-    image: [product_12],
+    image: [Product_12],
     category: "Lingerie",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -251,7 +251,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 130,
-    image: [product_13],
+    image: [Product_13],
     category: "Lingerie",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -264,7 +264,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 160,
-    image: [product_14],
+    image: [Product_14],
     category: "Lingerie",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -277,7 +277,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 220,
-    image: [product_3],
+    image: [Product_3],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "L", "XL"],
@@ -290,7 +290,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 170,
-    image: [product_16],
+    image: [Product_16],
     category: "Lingerie",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
@@ -303,7 +303,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 130,
-    image: [product_5],
+    image: [Product_5],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["M", "L", "XL"],
@@ -316,7 +316,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 190,
-    image: [product_7],
+    image: [Product_7],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["S", "L", "XL"],
@@ -329,7 +329,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 100,
-    image: [product_9],
+    image: [Product_9],
     category: "Lingerie",
     subCategory: "Everyday Wear",
     sizes: ["M", "L", "XL"],
@@ -342,7 +342,7 @@ export const products = [
     description:
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 190,
-    image: [product_20],
+    image: [Product_20],
     category: "Bra",
     subCategory: "Lace",
     sizes: ["S", "M", "L", "XL"],
