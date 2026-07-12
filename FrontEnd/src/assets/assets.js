@@ -19,7 +19,7 @@ import Product_17 from './Product_17.png'
 import Product_18 from './Product_18.png'
 import Product_19 from './Product_19.png'
 import Product_20 from './Product_20.png'
-P
+
 
 
 import Noorza from "./Noorza.png";
