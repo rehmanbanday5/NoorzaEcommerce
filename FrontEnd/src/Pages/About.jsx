@@ -10,9 +10,9 @@ const About = () => {
         <Title text1={'About'} text2={'Us'}/>
       </div>
 
-      <div className='my-10 flex flex-col md:flex-row gap-16'>
-        <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
-        <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
+      <div className='my-10 flex flex-col items-center md:flex-row gap-10 md:gap-16'>
+        <img className='w-full max-w-[450px] h-auto object-cover' src={assets.about_img} alt="" />
+        <div className='flex flex-col justify-center gap-6 w-full md:w-2/4 text-gray-600'>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iure facere molestias aut, mollitia ea praesentium dignissimos commodi cumque recusandae eaque numquam quam architecto accusantium sequi aperiam debitis doloremque blanditiis.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam architecto, magni deleniti nisi amet mollitia accusamus placeat in necessitatibus porro corporis. Labore excepturi praesentium, illo tempora a architecto maxime, voluptas est, suscipit cum minus veniam culpa fugit. Magnam debitis suscipit, nostrum, quasi quibusdam laudantium, totam animi officia dignissimos sequi consectetur.</p>
         <b className='text-gray-800'>Our Mission</b>
