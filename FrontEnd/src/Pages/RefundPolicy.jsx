@@ -6,17 +6,18 @@ import NewsLetterBox from "../Components/NewsLetterBox";
 const RefundPolicy = () => {
   return (
     <div className="py-10">
-         <div className="text-center py-8 text-3xl">
+      <div className="text-center py-8 text-3xl">
         <Title text1={"REFUND"} text2={"POLICY"} />
       </div>
 
-   
       <div className="flex flex-col sm:flex-row items-center gap-10">
         <div className="w-full sm:w-1/2">
-          <img src={assets.Refund}alt="Refund Policy"className="w-full h-[20rem] sm:h-[24rem] object-cover rounded-lg shadow-md"/>
+          <img
+            src={assets.Refund}
+            alt="Refund Policy"
+            className="w-full h-auto sm:h-[24rem] object-contain sm:object-cover sm:object-center object-right rounded-lg shadow-md"/>
         </div>
 
-      
         <div className="w-full sm:w-1/2 text-gray-600">
           <p className="mb-4 leading-7">
             At{" "}
@@ -41,7 +42,6 @@ const RefundPolicy = () => {
         </div>
       </div>
 
-      
       <div className="mt-20">
         <NewsLetterBox />
       </div>
