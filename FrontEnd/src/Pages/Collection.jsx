@@ -124,7 +124,7 @@ useEffect(() => {
       {/* ------------------------ Right Side Category Time ---------------------------- */}
 
       <div className='flex-1'>
-        <div className='flex justify-between text-base sm:text-2xl mb-4 whitespace-nowrap mr-3'>
+        <div className='flex justify-between text-base sm:text-2xl mb-4 whitespace-nowrap '>
           <Title  text1={'ALL'} text2={'PRODUCTS'} />
           {/* ------------------ Products Sorting ------------------- */}
 
