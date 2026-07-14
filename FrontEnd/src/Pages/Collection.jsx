@@ -128,7 +128,7 @@ useEffect(() => {
           <Title text1={'ALL'} text2={'PRODUCTS'} />
           {/* ------------------ Products Sorting ------------------- */}
 
-          <select onChange={(e)=>setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
+          <select onChange={(e)=>setSortType(e.target.value)} className="w-36 sm:w-auto h-9 border border-gray-300 rounded-md bg-white px-2 text-xs sm:text-sm">
             <option value="relevant">Sort By: Relevant</option>
             <option value="low-high">Sort By: Low to High</option>
             <option value="high-low">Sort By: High to Low</option>
