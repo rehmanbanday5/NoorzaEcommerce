@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
     
       <div className="flex flex-col sm:flex-row items-center gap-10">
         <div className="w-full sm:w-1/2">
-          <img src={assets.Privacy}alt="Privacy Policy"className="w-full h-[26rem] sm:h-[32rem] object-cover rounded-lg shadow-md"/>
+          <img src={assets.PrivacyP}alt="Privacy Policy"className="w-full h-[26rem] sm:h-[32rem] object-cover rounded-lg shadow-md"/>
         </div>
 
 
