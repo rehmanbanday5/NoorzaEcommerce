@@ -25,7 +25,7 @@ import Product_20 from './Product_20.png'
 import Noorza from "./Noorza.png"
 import Delivery from './Delivery.png'
 import Privacy from './Privacy.png'
-import Refund from './Refund.png'
+import RefundP from './RefundP.png'
 import hero_img from './hero_img.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
@@ -68,7 +68,7 @@ export const assets = {
   Noorza,
   Delivery,
   Privacy,
-  Refund,
+  RefundP,
   hero_img,
   cart_icon,
   dropdown_icon,

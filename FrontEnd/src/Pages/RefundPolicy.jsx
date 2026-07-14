@@ -13,7 +13,7 @@ const RefundPolicy = () => {
    
       <div className="flex flex-col sm:flex-row items-center gap-10">
         <div className="w-full sm:w-1/2">
-          <img src={assets.Refund}alt="Refund Policy"className="w-full h-[20rem] sm:h-[24rem] object-cover rounded-lg shadow-md"/>
+          <img src={assets.RefundP}alt="Refund Policy"className="w-full h-[20rem] sm:h-[24rem] object-cover rounded-lg shadow-md"/>
         </div>
 
       
