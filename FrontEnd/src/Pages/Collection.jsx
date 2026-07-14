@@ -124,8 +124,8 @@ useEffect(() => {
       {/* ------------------------ Right Side Category Time ---------------------------- */}
 
       <div className='flex-1'>
-        <div className='flex justify-between text-base sm:text-2xl mb-4'>
-          <Title text1={'ALL'} text2={'PRODUCTS'} />
+        <div className='flex justify-between text-base sm:text-2xl mb-4 whitespace-nowrap'>
+          <Title  text1={'ALL'} text2={'PRODUCTS'} />
           {/* ------------------ Products Sorting ------------------- */}
 
           <select onChange={(e)=>setSortType(e.target.value)} className="w-36 sm:w-auto h-9 border border-gray-300 rounded-md bg-white px-2 text-xs sm:text-sm">
@@ -134,7 +134,7 @@ useEffect(() => {
             <option value="high-low">Sort By: High to Low</option>
           </select>
         </div>
-
+ 
         {/* ----------------- Products Grid ------------------- */}
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
