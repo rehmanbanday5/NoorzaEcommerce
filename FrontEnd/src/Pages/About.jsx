@@ -20,7 +20,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className='text-4xl py-4'>
+      <div className='text-4xl py-4  whitespace-nowrap'>
         <Title text1={'Why'} text2={'Choose Us'} />
       </div>
 
