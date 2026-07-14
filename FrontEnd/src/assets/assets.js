@@ -22,7 +22,7 @@ import Product_20 from './Product_20.png'
 
 
 
-import Noorza from "./Noorza.png";
+import Noorza from "./Noorza.png"
 import Delivery from './Delivery.png'
 import Privacy from './Privacy.png'
 import Refund from './Refund.png'

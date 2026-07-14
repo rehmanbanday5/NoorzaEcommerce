@@ -5,15 +5,18 @@ import { FaInstagram,FaWhatsapp,FaLocationDot,FaEnvelope,FaPhone} from "react-ic
 
 const Footer = () => {
   return (
-    <div className="mt-40">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 text-sm">
-        <div>
-          <img src={assets.Noorza} className="w-32 mb-5" alt="Noorza" />
+    <div>
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
 
-          <p className="text-gray-600 leading-6">
+        <div>
+           <img src={assets.Noorza} className="mb-5 w-40" alt="Noorza" />
+           <p className="w-full md:w-2/3 text-gray-600">
             Premium Fashion And Essentials Designed To Bring Style, Comfort And
             Confidence To Your Everyday Life.
           </p>
+          
+        
+          
 
           <div className="flex items-center gap-4 mt-6 text-xl">
             <a
@@ -27,10 +30,12 @@ const Footer = () => {
               <FaWhatsapp className="hover:text-[#c89116] transition" />
             </a>
           </div>
-        </div>
+          </div>
+        
+        
 
         <div>
-          <p className="text-xl font-medium mb-5">COMPANY</p>
+          <p className="text-2xl font-medium mb-5">COMPANY</p>
 
           <ul className="flex flex-col gap-3 text-gray-600">
             <Link to="/" className="hover:text-[#c89116] transition">
@@ -58,10 +63,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="text-xl font-medium mb-5">CONTACT</p>
+          <p className="text-2xl font-medium mb-5">CONTACT</p>
 
           <div className="flex flex-col gap-4 text-gray-600">
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-5">
               <FaLocationDot className="mt-1 text-[#c89116]" />
 
               <p>Commercial Market, Rawalpindi, Pakistan</p>
@@ -92,7 +97,12 @@ const Footer = () => {
         </p>
       </div>
     </div>
+    
   );
 };
 
-export default Footer;
+export default  Footer;
+
+
+
+
