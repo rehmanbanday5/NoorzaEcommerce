@@ -6,9 +6,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import ShopContextProvider from "./Context/ShopContext.jsx";
-import NoorzaFavicon from "./assets/Noorza Favicon.png";
 
-document.querySelector("link[rel='icon']").href = NoorzaFavicon;
+
 
 ReactDom.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
