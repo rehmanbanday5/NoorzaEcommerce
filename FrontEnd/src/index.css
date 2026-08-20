@@ -42,3 +42,21 @@ a.active hr{
 
 
 
+@keyframes instagram-slider {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.instagram-slider {
+  animation: instagram-slider 35s linear infinite;
+}
+
+.instagram-slider:hover {
+  animation-play-state: paused;
+}
+

@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "../Components/Title";
 import { assets } from "../assets/assets";
-import NewsLetterBox from "../Components/NewsLetterBox";
+
 
 const Delivery = () => {
   return (
@@ -44,7 +44,6 @@ const Delivery = () => {
         </div>
       </div>
       <div className="mt-20">
-        <NewsLetterBox />
       </div>
     </div>
   );

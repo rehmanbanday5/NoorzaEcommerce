@@ -14,6 +14,7 @@ import Footer from './Components/Footer'
 import Delivery from "./Pages/Delivery";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import RefundPolicy from "./Pages/RefundPolicy";
+import PaymentPolicy from "./Pages/PaymentPolicy";
 import ScrollTop from './Components/ScrollTop'
 import SearchBar from './Components/SearchBar'
 import { ToastContainer, toast } from 'react-toastify';
@@ -23,7 +24,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <>
-      <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <div className="overflow-x-hidden px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <ToastContainer />
         <Navbar />
         <SearchBar />
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/payment-policy" element={<PaymentPolicy />} />
         </Routes>
       </div>
       <Footer />

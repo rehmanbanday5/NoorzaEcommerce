@@ -2,8 +2,9 @@ import React from 'react'
 import Hero from '../Components/Hero'
 import LatestCollection from '../Components/LatestCollection'
 import BestSeller from '../Components/BestSeller'
-import OurPolicy from '../Components/OurPolicy'
-import NewsLetterBox from '../Components/NewsLetterBox'
+import ShopByCategory from "../Components/ShopByCategory";
+import WhyChooseNoorza from "../Components/WhyChooseNoorza";
+import InstagramSection from "../Components/InstagramSection";
 
 
 
@@ -11,13 +12,14 @@ import NewsLetterBox from '../Components/NewsLetterBox'
 const Home = () => {
   return (
     <div>
-      <Hero/>
-      <LatestCollection/>
-      <BestSeller/>
-      <OurPolicy/>
-      <NewsLetterBox/>
+      <Hero />
+      <ShopByCategory />
+      <LatestCollection />
+      <WhyChooseNoorza />
+      <BestSeller />
+      <InstagramSection />
     </div>
-  )
+  );
 }
 
 export default Home

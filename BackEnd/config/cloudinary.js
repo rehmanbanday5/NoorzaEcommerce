@@ -1,12 +1,12 @@
 import { v2 as cloudinary } from "cloudinary";
 
-const connectCloudinary = async () => {
+const connectCloudinary = () => {
   const cloudName = process.env.CLOUDINARY_NAME;
   const apiKey = process.env.CLOUDINARY_API_KEY;
   const apiSecret = process.env.CLOUDINARY_SECRET_KEY;
 
   if (!cloudName || !apiKey || !apiSecret) {
-    console.error("Cloudinary credentials are missing. Check BackEnd/.env for CLOUDINARY_NAME, CLOUDINARY_API_KEY, and CLOUDINARY_SECRET_KEY.");
+    console.error("❌ Cloudinary credentials are missing!");
     return;
   }
 
@@ -16,8 +16,10 @@ const connectCloudinary = async () => {
     api_secret: apiSecret,
   });
 
-  console.log("Cloudinary connected. Cloud name:", cloudName, "| API Key loaded:", !!apiKey, "| Secret loaded:", !!apiSecret);
+  console.log("✅ Cloudinary configured successfully");
+  console.log("Cloud Name:", cloudName);
+  console.log("API Key loaded:", !!apiKey);
+  console.log("Secret loaded:", !!apiSecret);
 };
 
 export default connectCloudinary;
-

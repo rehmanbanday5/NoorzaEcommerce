@@ -5,7 +5,7 @@ import { FaInstagram,FaWhatsapp,FaLocationDot,FaEnvelope,FaPhone} from "react-ic
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white mt-40 pt-1 pb-6 sm:pb-8">
+    <footer className="w-full bg-black text-white mt-40 pt-1 pb-6 sm:pb-8 overflow-x-hidden">
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 text-sm">
           <div>
@@ -65,6 +65,13 @@ const Footer = () => {
               >
                 Refund Policy
               </Link>
+
+               <Link
+                to="/Payment-Policy"
+                className="hover:text-[#c89116] transition"
+              >
+                Payment Policy
+              </Link>
             </ul>
           </div>
 
@@ -96,7 +103,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-20 pt-5">
+
+        <div className="border-t border-gray-700 mt-20 pt-5 -mx-4 sm:-mx-[5vw] md:-mx-[7vw] lg:-mx-[9vw]">
           <p className="text-center text-md text-gray-400">
             Copyright © 2026{" "}
             <a

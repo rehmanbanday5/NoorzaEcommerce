@@ -27,6 +27,11 @@ import Banner1 from "./Banner1.png"
 import Banner2 from "./Banner2.png"
 import Banner3 from "./Banner3.png"
 import Banner4 from "./Banner4.png"
+import BraCategory from "./BraCategory.png";
+import BraSets from "./BraSets.png";
+import LingerieCategory from "./LingerieCategory.png";
+import easypaisa from "./easypaisa.png";
+import jazzcash from "./jazzcash.png";
 import Delivery from './Delivery.png'
 import Privacy from './Privacy.png'
 import Refund from './Refund.png'
@@ -65,10 +70,15 @@ export const assets = {
   Product_19,
   Product_20,
   Noorza,
+  BraCategory,
+  LingerieCategory,
+  BraSets,
   Banner1,
   Banner2,
   Banner3,
   Banner4,
+  easypaisa,
+  jazzcash,
   Delivery,
   Privacy,
   Refund,

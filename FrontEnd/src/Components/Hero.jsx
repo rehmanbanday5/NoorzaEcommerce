@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import ShopByCategory from "../Components/ShopByCategory";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const Hero = () => {
 
         <button
           onClick={() => navigate("/collection")}
-          className="absolute bottom-[8%] left-[8%] inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-black bg-black px-8 py-3 text-sm font-semibold text-white transition duration-300 hover:border-[#c89116] hover:text-[#c89116]"
+          className="absolute bottom-[6%] left-[6%] inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-black bg-black px-8 py-3 text-sm font-semibold text-white transition duration-300 hover:border-[#c89116] hover:text-[#c89116]"
         >
           SHOP NOW
         </button>

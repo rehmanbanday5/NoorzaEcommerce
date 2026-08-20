@@ -117,7 +117,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/collection"
+            to="/collection?category=Bra"
             className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
           >
             <p>BRA</p>
@@ -125,7 +125,15 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/collection"
+            to="/collection?subCategory=BRA%20SETS"
+            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+          >
+            <p>BRA SETS</p>
+            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
+
+          <NavLink
+            to="/collection?category=Lingerie"
             className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
           >
             <p>LINGERIE</p>
