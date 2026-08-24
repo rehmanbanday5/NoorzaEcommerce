@@ -1,13 +1,36 @@
-import React from 'react'
-import {assets} from '../assets/assets'
+import React from "react";
+import { assets } from "../assets/assets";
 
-const Navbar = ({setToken}) => {
+const Navbar = () => {
   return (
-    <div className="flex items-center py-2 px-[4%] justify-between ">
-      <img className="w-[max(10%,80px)]" src={assets.Noorza} alt="" />
-      <button onClick={() => setToken('')} className="bg-gray-600 text-white px-5 py-2 sm:px-7 sm:py-2 rounded-full text-xs sm:text-sm">Logout</button>
+    <div className="h-[73px] flex items-center justify-between px-6 sm:px-10 border-b border-gray-200 bg-white">
+      <div className="flex items-center gap-4">
+        <img
+          className="w-[115px] object-contain"
+          src={assets.Noorza}
+          alt="Noorza"
+        />
+
+        <div className="hidden sm:block h-6 w-px bg-gray-200" />
+
+        <p className="hidden sm:block text-sm font-medium text-gray-500">
+          Admin Dashboard
+        </p>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <div className="hidden sm:flex flex-col items-end">
+          <p className="text-xs font-semibold text-gray-800">Administrator</p>
+
+          <p className="text-[10px] text-gray-400">Noorza Store</p>
+        </div>
+
+        <div className="h-10 w-10 rounded-full bg-[#faf8f3] border border-[#ead9ad] flex items-center justify-center">
+          <span className="text-[#c89116] font-semibold">N</span>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default Navbar 
+export default Navbar;

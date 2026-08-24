@@ -1,46 +1,86 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Add from "./pages/Add";
 import List from "./pages/List";
 import Orders from "./pages/Orders";
 import Login from "./components/Login";
 import Instagram from "./pages/Instagram";
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
 
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL;
-export const currency = 'Rs'
+export const currency = "Rs";
 
 const App = () => {
-  const [token, setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):'');
+  const [token, setToken] = useState(
+    localStorage.getItem("token") ? localStorage.getItem("token") : "",
+  );
 
-  useEffect(()=>{
-    localStorage.setItem("token",token)
-  },[token])
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem("token", token);
+    } else {
+      localStorage.removeItem("token");
+    }
+  }, [token]);
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <ToastContainer />
+    <div className="bg-[#f8f8f7] min-h-screen">
+      <ToastContainer position="top-right" />
+
       {token === "" ? (
         <Login setToken={setToken} />
       ) : (
         <>
-          <Navbar setToken={setToken} />
-          <hr />
+          <Navbar />
+
           <div className="flex w-full">
-            <Sidebar />
-            <div className="w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base">
+            <Sidebar setToken={setToken} />
+
+            <main className="flex-1 min-w-0 px-5 sm:px-8 lg:px-10 py-8">
               <Routes>
-                <Route path="/" element={<Add token={token} />} />
+                {/* Dashboard */}
+                <Route
+                  path="/"
+                  element={<Navigate to="/dashboard" replace />}
+                />
+
+                <Route
+                  path="/dashboard"
+                  element={<Dashboard token={token} />}
+                />
+
+                {/* Products */}
+                <Route path="/products" element={<List token={token} />} />
+
                 <Route path="/add" element={<Add token={token} />} />
-                <Route path="/list" element={<List token={token} />} />
-                <Route path="/instagram" element={<Instagram token={token} />} />
+
+                {/* Orders */}
                 <Route path="/orders" element={<Orders token={token} />} />
+
+                {/* Instagram */}
+                <Route
+                  path="/instagram"
+                  element={<Instagram token={token} />}
+                />
+
+                {/* Settings */}
+                <Route path="/settings" element={<Settings token={token} />} />
+
+                {/* Old URLs */}
+                <Route
+                  path="/list"
+                  element={<Navigate to="/products" replace />}
+                />
               </Routes>
-            </div>
+            </main>
           </div>
         </>
       )}

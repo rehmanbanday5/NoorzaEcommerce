@@ -30,6 +30,7 @@ import Banner4 from "./Banner4.png"
 import BraCategory from "./BraCategory.png";
 import BraSets from "./BraSets.png";
 import LingerieCategory from "./LingerieCategory.png";
+import NightWear from "./NightWear.png";
 import easypaisa from "./easypaisa.png";
 import jazzcash from "./jazzcash.png";
 import Delivery from './Delivery.png'
@@ -73,6 +74,7 @@ export const assets = {
   BraCategory,
   LingerieCategory,
   BraSets,
+  NightWear,
   Banner1,
   Banner2,
   Banner3,

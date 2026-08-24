@@ -24,6 +24,12 @@ const ShopByCategory = () => {
       value: "BRA SETS",
       image: assets.BraSets,
     },
+    {
+      name: "NIGHTWEAR",
+      type: "subCategory",
+      value: "BRA SETS",
+      image: assets.NightWear,
+    },
   ];
 
   const handleCategoryClick = (category) => {

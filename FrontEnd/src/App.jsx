@@ -17,6 +17,8 @@ import RefundPolicy from "./Pages/RefundPolicy";
 import PaymentPolicy from "./Pages/PaymentPolicy";
 import ScrollTop from './Components/ScrollTop'
 import SearchBar from './Components/SearchBar'
+import OrderSuccess from "./Pages/OrderSuccess";
+import OrderTracking from "./Pages/OrderTracking";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -43,6 +45,8 @@ const App = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/payment-policy" element={<PaymentPolicy />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
+          <Route path="/track-order/:orderId" element={<OrderTracking />} />
         </Routes>
       </div>
       <Footer />

@@ -1,50 +1,55 @@
-import express from "express";
-import cors from "cors";
+import dns from "dns";
+import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
-import dotenv from "dotenv";
-
-import connectDB from "./config/mongodb.js";
-import connectCloudinary from "./config/cloudinary.js";
-
-import userRouter from "./routes/userRoute.js";
-import productRouter from "./routes/productRoute.js";
-import cartRouter from "./routes/cartRoute.js";
-import orderRouter from "./routes/orderRoute.js";
-import instagramRouter from "./routes/instagramRoute.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load .env FIRST
 dotenv.config({
   path: path.resolve(__dirname, ".env"),
 });
 
-// App Config
-const app = express();
-const port = process.env.PORT || 4000;
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
-// Database + Cloudinary
-connectDB();
-connectCloudinary();
+const startServer = async () => {
+  const express = (await import("express")).default;
+  const cors = (await import("cors")).default;
 
-// Middlewares
-app.use(express.json());
-app.use(cors());
+  const connectDB = (await import("./config/mongodb.js")).default;
+  const connectCloudinary = (await import("./config/cloudinary.js")).default;
 
-// API Endpoints
-app.use("/api/user", userRouter);
-app.use("/api/product", productRouter);
-app.use("/api/cart", cartRouter);
-app.use("/api/order", orderRouter);
-app.use("/api/instagram", instagramRouter);
+  const userRouter = (await import("./routes/userRoute.js")).default;
+  const productRouter = (await import("./routes/productRoute.js")).default;
+  const cartRouter = (await import("./routes/cartRoute.js")).default;
+  const orderRouter = (await import("./routes/orderRoute.js")).default;
+  const instagramRouter = (await import("./routes/instagramRoute.js")).default;
 
-// Test route
-app.get("/", (req, res) => {
-  res.send("API WORKING");
-});
+  const createAdmin = (await import("./config/createAdmin.js")).default;
 
-app.listen(port, () => {
-  console.log("Server started on PORT " + port);
-});
+  const app = express();
+  const port = process.env.PORT || 4000;
+
+  connectDB();
+  connectCloudinary();
+  createAdmin();
+
+  app.use(express.json());
+  app.use(cors());
+
+  app.use("/api/user", userRouter);
+  app.use("/api/product", productRouter);
+  app.use("/api/cart", cartRouter);
+  app.use("/api/order", orderRouter);
+  app.use("/api/instagram", instagramRouter);
+
+  app.get("/", (req, res) => {
+    res.send("API WORKING");
+  });
+
+  app.listen(port, () => {
+    console.log("Server started on PORT " + port);
+  });
+};
+
+startServer();

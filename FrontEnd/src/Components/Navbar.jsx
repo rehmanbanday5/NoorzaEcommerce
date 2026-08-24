@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { ShopContext } from "../Context/ShopContext";
 import { Search, UserRound, ShoppingBag } from "lucide-react";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
   const {
     setShowSearch,
     getCartCount,
@@ -15,6 +16,8 @@ const Navbar = () => {
     setCartItems,
   } = useContext(ShopContext);
 
+  const location = useLocation();
+
   const logout = () => {
     navigate("/login");
     localStorage.removeItem("token");
@@ -22,6 +25,16 @@ const Navbar = () => {
     setCartItems({});
     navigate("/login");
   };
+
+  // ================= ACTIVE NAVBAR LINK =================
+  const isActive = (path, search = "") => {
+    return location.pathname === path && location.search === search;
+  };
+
+  const navClass = (active) =>
+    `flex flex-col items-center gap-1 transition ease-in-out ${
+      active ? "text-[#c89116]" : "text-gray-700 hover:text-[#c89116]"
+    }`;
 
   return (
     <div>
@@ -97,8 +110,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {/* ---------------- Existing Navbar ---------------- */}
       <div className="flex items-center justify-between py-5 font-medium">
+        {/* LOGO */}
         <Link to="/">
           <img
             src={assets.Noorza}
@@ -107,67 +122,118 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="hidden sm:flex gap-10 text-sm text-gray-700">
-          <NavLink
-            to="/"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
-          >
+        {/* ================= DESKTOP NAVBAR ================= */}
+        <ul className="hidden sm:flex gap-10 text-sm">
+          {/* HOME */}
+          <NavLink to="/" className={navClass(isActive("/", ""))}>
             <p>HOME</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/", "") ? "block" : "hidden"
+              }`}
+            />
           </NavLink>
 
+          {/* BRA */}
           <NavLink
             to="/collection?category=Bra"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+            className={navClass(isActive("/collection", "?category=Bra"))}
           >
             <p>BRA</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/collection", "?category=Bra") ? "block" : "hidden"
+              }`}
+            />
           </NavLink>
 
+          {/* BRA SETS */}
           <NavLink
             to="/collection?subCategory=BRA%20SETS"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+            className={navClass(
+              isActive("/collection", "?subCategory=BRA%20SETS"),
+            )}
           >
             <p>BRA SETS</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/collection", "?subCategory=BRA%20SETS")
+                  ? "block"
+                  : "hidden"
+              }`}
+            />
           </NavLink>
 
+          {/* LINGERIE */}
           <NavLink
             to="/collection?category=Lingerie"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+            className={navClass(isActive("/collection", "?category=Lingerie"))}
           >
             <p>LINGERIE</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/collection", "?category=Lingerie")
+                  ? "block"
+                  : "hidden"
+              }`}
+            />
           </NavLink>
 
+          {/* NIGHTWEAR */}
           <NavLink
-            to="/about"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+            to="/collection?category=Nightwear"
+            className={navClass(isActive("/collection", "?category=Nightwear"))}
           >
+            <p>NIGHTWEAR</p>
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/collection", "?category=Nightwear")
+                  ? "block"
+                  : "hidden"
+              }`}
+            />
+          </NavLink>
+
+          {/* ABOUT */}
+          <NavLink to="/about" className={navClass(isActive("/about", ""))}>
             <p>ABOUT</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/about", "") ? "block" : "hidden"
+              }`}
+            />
           </NavLink>
 
-          <NavLink
-            to="/contact"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
-          >
+          {/* CONTACT */}
+          <NavLink to="/contact" className={navClass(isActive("/contact", ""))}>
             <p>CONTACT</p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/contact", "") ? "block" : "hidden"
+              }`}
+            />
           </NavLink>
 
+          {/* ALL COLLECTION */}
           <NavLink
             to="/collection"
-            className="flex flex-col items-center gap-1 hover:text-[#c89116] transition ease-in-out"
+            className={navClass(isActive("/collection", ""))}
           >
             <p>
-              ALL<span className="ml-2">COLLECTION</span>
+              SHOP<span className="ml-2">ALL</span>
             </p>
-            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+
+            <hr
+              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                isActive("/collection", "") ? "block" : "hidden"
+              }`}
+            />
           </NavLink>
         </ul>
 
+        {/* ================= RIGHT ICONS ================= */}
         <div className="flex items-center gap-6">
+          {/* SEARCH */}
           <button
             aria-label="Search products"
             onClick={() => setShowSearch(true)}
@@ -176,6 +242,8 @@ const Navbar = () => {
             <Search size={20} />
           </button>
 
+          {/* PROFILE */}
+          {/* PROFILE */}
           <div className="group relative">
             <button
               aria-label="Profile"
@@ -185,29 +253,65 @@ const Navbar = () => {
               <UserRound size={20} />
             </button>
 
-            {token && (
-              <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
-                <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
-                  <p className="cursor-pointer hover:text-[#c89116]">
-                    My Profile
-                  </p>
-                  <p
-                    onClick={() => navigate("/orders")}
-                    className="cursor-pointer hover:text-[#c89116]"
-                  >
-                    Orders
-                  </p>
-                  <p
-                    onClick={logout}
-                    className="cursor-pointer hover:text-[#c89116]"
-                  >
-                    Logout
-                  </p>
-                </div>
+            {/* PROFILE DROPDOWN */}
+            <div className="group-hover:block hidden absolute right-0 top-full pt-4 z-50">
+              <div className="w-48 rounded-2xl border border-gray-200 bg-white p-2 shadow-[0_15px_40px_rgba(0,0,0,0.10)]">
+                {token ? (
+                  <>
+                    <button
+                      onClick={() => navigate("/profile")}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm text-gray-600 transition-all hover:bg-[#faf8f3] hover:text-[#c89116]"
+                    >
+                      My Profile
+                    </button>
+
+                    <button
+                      onClick={() => navigate("/orders")}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm text-gray-600 transition-all hover:bg-[#faf8f3] hover:text-[#c89116]"
+                    >
+                      Orders
+                    </button>
+
+                    <div className="my-1 border-t border-gray-100" />
+
+                    <button
+                      onClick={logout}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm text-red-500 transition-all hover:bg-red-50"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => navigate("/login")}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm text-gray-600 transition-all hover:bg-[#faf8f3] hover:text-[#c89116]"
+                    >
+                      Sign In
+                    </button>
+
+                    <button
+                      onClick={() => navigate("/orders")}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm text-gray-600 transition-all hover:bg-[#faf8f3] hover:text-[#c89116]"
+                    >
+                      Orders
+                    </button>
+
+                    <div className="my-1 border-t border-gray-100" />
+
+                    <button
+                      onClick={() => navigate("/register")}
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm font-semibold text-[#c89116] transition-all hover:bg-[#faf8f3]"
+                    >
+                      Create Account
+                    </button>
+                  </>
+                )}
               </div>
-            )}
+            </div>
           </div>
 
+          {/* CART */}
           <Link to="/cart" className="relative">
             <span className="p-2 rounded-full text-gray-700 transition duration-200 hover:text-[#D4AF37] inline-flex">
               <ShoppingBag size={20} />
@@ -220,6 +324,7 @@ const Navbar = () => {
             )}
           </Link>
 
+          {/* MOBILE MENU */}
           <img
             onClick={() => setVisible(true)}
             src={assets.menu_icon}
@@ -228,9 +333,11 @@ const Navbar = () => {
           />
         </div>
 
-        {/* --------------SideBar Menu For Small Screen ------------------- */}
+        {/* ================= MOBILE SIDEBAR ================= */}
         <div
-          className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? "w-full" : "w-0"}`}
+          className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+            visible ? "w-full" : "w-0"
+          }`}
         >
           <div className="flex flex-col text-gray-600">
             <div
@@ -252,6 +359,7 @@ const Navbar = () => {
             >
               HOME
             </NavLink>
+
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
@@ -259,6 +367,7 @@ const Navbar = () => {
             >
               COLLECTION
             </NavLink>
+
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
@@ -266,6 +375,7 @@ const Navbar = () => {
             >
               ABOUT
             </NavLink>
+
             <NavLink
               onClick={() => setVisible(false)}
               className="py-2 pl-6 border"
@@ -281,3 +391,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

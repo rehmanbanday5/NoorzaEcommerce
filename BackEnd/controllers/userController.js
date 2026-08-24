@@ -1,120 +1,278 @@
-import validator from 'validator';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import userModel from '../models/userModel.js';
+import validator from "validator";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import userModel from "../models/userModel.js";
+import adminModel from "../models/adminModel.js";
+
+// ===============================
+// CREATE USER TOKEN
+// ===============================
 
 const createToken = (id) => {
-    return jwt.sign({id}, process.env.JWT_SECRET)
-}
+  return jwt.sign({ id }, process.env.JWT_SECRET);
+};
 
-
-// Route for user login 
+// ===============================
+// USER LOGIN
+// ===============================
 
 const loginUser = async (req, res) => {
-        try {
+  try {
+    const { email, password } = req.body;
 
-            const {email, password} = req.body;
+    const user = await userModel.findOne({ email });
 
-            const user = await userModel.findOne({email});
+    if (!user) {
+      return res.json({
+        success: false,
+        message: "User Doesn't Exists",
+      });
+    }
 
-            if(!user){
-            return res.json({ success: false, message: "User Doesn't Exists" });
+    const isMatch = await bcrypt.compare(password, user.password);
 
-            }
+    if (isMatch) {
+      const token = createToken(user._id);
 
-            const isMatch = await bcrypt.compare(password, user.password);
+      return res.json({
+        success: true,
+        token,
+      });
+    }
 
-            if(isMatch){
-                const token = createToken(user._id)
-                res.json({success:true, token})
-            }
-            else{
-                res.json({success:false, message: "Invalid Credentials"})
-            }
+    return res.json({
+      success: false,
+      message: "Invalid Credentials",
+    });
+  } catch (error) {
+    console.log(error);
 
+    return res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
 
-        } catch (error) {
-             console.log(error);
-             res.json({ success: false, message: error.message });
-
-        }
-
-}
-
-
-// Route for user registration
+// ===============================
+// USER REGISTER
+// ===============================
 
 const registerUser = async (req, res) => {
-    try{
+  try {
+    const { name, email, password } = req.body;
 
-        const {name,email,password} = req.body;
+    const exists = await userModel.findOne({ email });
 
-        // Checking User Alreay Exists or Not 
-        const exists = await userModel.findOne({email});
-        if(exists){
-
-            return res.json({success:false, message: "User Already Exists"})
-
-        }
-
-        // Validating email format and strong password 
-        if(!validator.isEmail(email)){
-            return res.json({success:false, message: "Invalid Email Format"})
-        }
-
-        if(password.length < 8 ){
-            return res.json({success:false, message: "Password is not strong enough"})
-        }
-
-        // Hashing user Password
-
-        const salt = await bcrypt.genSalt(10)
-        const hashedPassword = await bcrypt.hash(password, salt)
-
-        const newUser = new userModel({
-            name,
-            email,
-            password: hashedPassword
-        })
-
-        const user = await newUser.save()
-
-        const token = createToken(user._id)
-
-        res.json ({success:true, token})
-
-
-    } catch (error) {
-
-        console.log(error)
-        res.json({success:false, message:error.message})
-    
+    if (exists) {
+      return res.json({
+        success: false,
+        message: "User Already Exists",
+      });
     }
 
-}
+    if (!validator.isEmail(email)) {
+      return res.json({
+        success: false,
+        message: "Invalid Email Format",
+      });
+    }
 
+    if (password.length < 8) {
+      return res.json({
+        success: false,
+        message: "Password is not strong enough",
+      });
+    }
 
-// Route for admin login 
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const newUser = new userModel({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    const user = await newUser.save();
+
+    const token = createToken(user._id);
+
+    res.json({
+      success: true,
+      token,
+    });
+  } catch (error) {
+    console.log(error);
+
+    res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// ===============================
+// ADMIN LOGIN
+// ===============================
 
 const adminLogin = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-    try{
-
-        const {email, password} = req.body;
-
-        if(email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD){
-            const token = jwt.sign(email+password,process.env.JWT_SECRET);
-            res.json({success:true, token})
-    } else{
-            res.json({success:false, message: "Invalid Credentials"})
+    if (!email || !password) {
+      return res.json({
+        success: false,
+        message: "Email and password are required",
+      });
     }
 
-    } catch (error) {
-        console.log(error);
-        res.json({ success: false, message: error.message });
+    const normalizedEmail = email.toLowerCase().trim();
+
+    let admin = await adminModel.findOne({
+      email: normalizedEmail,
+    });
+
+    // ==========================================
+    // FIRST TIME ADMIN SETUP
+    // If MongoDB admin doesn't exist,
+    // create it from .env credentials
+    // ==========================================
+
+    if (!admin) {
+      if (
+        normalizedEmail !== process.env.ADMIN_EMAIL.toLowerCase().trim() ||
+        password !== process.env.ADMIN_PASSWORD
+      ) {
+        return res.json({
+          success: false,
+          message: "Invalid Credentials",
+        });
+      }
+
+      const salt = await bcrypt.genSalt(10);
+
+      const hashedPassword = await bcrypt.hash(
+        process.env.ADMIN_PASSWORD,
+        salt,
+      );
+
+      admin = await adminModel.create({
+        name: "Noorza Admin",
+        phone: "",
+        email: normalizedEmail,
+        password: hashedPassword,
+      });
+    } else {
+      // ==========================================
+      // NORMAL LOGIN FROM MONGODB
+      // ==========================================
+
+      const isMatch = await bcrypt.compare(password, admin.password);
+
+      if (!isMatch) {
+        return res.json({
+          success: false,
+          message: "Invalid Credentials",
+        });
+      }
     }
 
-}   
+    // ==========================================
+    // CREATE ADMIN TOKEN
+    // ==========================================
 
+    const token = jwt.sign(
+      {
+        id: admin._id,
+        role: "admin",
+      },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "1d",
+      },
+    );
 
-export { loginUser, registerUser, adminLogin }
+    return res.json({
+      success: true,
+      token,
+    });
+  } catch (error) {
+    console.log(error);
+
+    return res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// ===============================
+// CHANGE ADMIN PASSWORD
+// ===============================
+
+const changeAdminPassword = async (req, res) => {
+  try {
+    const { current, newPassword } = req.body;
+
+    if (!current || !newPassword) {
+      return res.json({
+        success: false,
+        message: "Current and new password are required",
+      });
+    }
+
+    if (newPassword.length < 8) {
+      return res.json({
+        success: false,
+        message: "New password must be at least 8 characters",
+      });
+    }
+
+    const admin = await adminModel.findById(req.adminId);
+
+    if (!admin) {
+      return res.json({
+        success: false,
+        message: "Admin account not found",
+      });
+    }
+
+    // Check current password
+
+    const isMatch = await bcrypt.compare(current, admin.password);
+
+    if (!isMatch) {
+      return res.json({
+        success: false,
+        message: "Current password is incorrect",
+      });
+    }
+
+    // Hash new password
+
+    const salt = await bcrypt.genSalt(10);
+
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    // Save new password
+
+    admin.password = hashedPassword;
+
+    await admin.save();
+
+    return res.json({
+      success: true,
+      message: "Password changed successfully",
+    });
+  } catch (error) {
+    console.log(error);
+
+    return res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+export { loginUser, registerUser, adminLogin, changeAdminPassword };
