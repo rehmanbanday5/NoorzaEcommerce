@@ -336,15 +336,15 @@ const Navbar = () => {
 
         {/* ================= MOBILE SIDEBAR ================= */}
         <div
-          className={`fixed top-0 right-0 bottom-0 z-[100] overflow-y-auto bg-white transition-all duration-300 ${
+          className={`fixed inset-0 z-[100] overflow-hidden bg-white transition-all duration-300 ${
             visible ? "w-full" : "w-0"
           }`}
         >
-          <div className="flex min-h-full flex-col text-gray-600">
-            {/* BACK */}
+          <div className="flex h-full flex-col text-gray-600">
+            {/* Back */}
             <div
               onClick={() => setVisible(false)}
-              className="flex items-center gap-4 p-5 cursor-pointer border-b border-gray-100"
+              className="flex items-center gap-4 p-4 cursor-pointer border-b border-gray-100"
             >
               <img
                 src={assets.dropdown_icon}
@@ -357,8 +357,12 @@ const Navbar = () => {
             {/* HOME */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/"
+              className={`py-4 pl-6 border-b ${
+                isActive("/", "")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               HOME
             </NavLink>
@@ -366,8 +370,12 @@ const Navbar = () => {
             {/* BRA */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/collection?category=Bra"
+              className={`py-4 pl-6 border-b ${
+                isActive("/collection", "?category=Bra")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               BRA
             </NavLink>
@@ -375,8 +383,12 @@ const Navbar = () => {
             {/* BRA SETS */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/collection?category=Bra%20Sets"
+              className={`py-4 pl-6 border-b ${
+                isActive("/collection", "?category=Bra%20Sets")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               BRA SETS
             </NavLink>
@@ -384,8 +396,12 @@ const Navbar = () => {
             {/* LINGERIE */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/collection?category=Lingerie"
+              className={`py-4 pl-6 border-b ${
+                isActive("/collection", "?category=Lingerie")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               LINGERIE
             </NavLink>
@@ -393,26 +409,25 @@ const Navbar = () => {
             {/* NIGHTWEAR */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/collection?category=Nightwear"
+              className={`py-4 pl-6 border-b ${
+                isActive("/collection", "?category=Nightwear")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               NIGHTWEAR
-            </NavLink>
-
-            {/* SHOP ALL */}
-            <NavLink
-              onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
-              to="/collection"
-            >
-              SHOP ALL
             </NavLink>
 
             {/* ABOUT */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/about"
+              className={`py-4 pl-6 border-b ${
+                isActive("/about", "")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               ABOUT
             </NavLink>
@@ -420,10 +435,27 @@ const Navbar = () => {
             {/* CONTACT */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/contact"
+              className={`py-4 pl-6 border-b ${
+                isActive("/contact", "")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
             >
               CONTACT
+            </NavLink>
+
+            {/* ALL COLLECTION */}
+            <NavLink
+              onClick={() => setVisible(false)}
+              to="/collection"
+              className={`py-4 pl-6 border-b ${
+                isActive("/collection", "")
+                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  : "text-gray-600"
+              }`}
+            >
+              SHOP ALL
             </NavLink>
           </div>
         </div>

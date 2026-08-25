@@ -66,7 +66,7 @@ const Cart = () => {
               return (
                 <div
                   key={index}
-                  className="py-4 border-t border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
+                  className="py-4 border-t border-b text-gray-700 grid grid-cols-[1fr_auto_auto] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-3 sm:gap-4"
                 >
                   <div className="flex items-start gap-6">
                     <img
@@ -131,7 +131,7 @@ const Cart = () => {
 
                   <img
                     onClick={() => updateQuantity(item._id, item.size, 0)}
-                    className="w-4 mr-4 sm:w-5 cursor-pointer hover:opacity-70"
+                    className="w-4 sm:w-5 cursor-pointer hover:opacity-70 justify-self-center"
                     src={assets.bin_icon}
                     alt=""
                   />
