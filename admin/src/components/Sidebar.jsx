@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { assets } from "../assets/assets";
 
-const Sidebar = ({ setToken }) => {
+const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
   const navigate = useNavigate();
 
   const menuItems = [
@@ -39,10 +38,49 @@ const Sidebar = ({ setToken }) => {
     navigate("/");
   };
 
+  const handleMenuClick = () => {
+    setSidebarOpen(false);
+  };
+
   return (
-    <aside className="w-[250px] shrink-0 min-h-[calc(100vh-73px)] border-r border-gray-200 bg-white hidden md:flex flex-col">
-      {/* Sidebar Header */}
-      <div className="px-6 py-7 border-b border-gray-100">
+    <aside
+      className={`
+        fixed md:static
+        top-0 left-0 z-50
+        w-[250px]
+        h-screen md:h-auto
+        min-h-[calc(100vh-73px)]
+        shrink-0
+        border-r border-gray-200
+        bg-white
+        flex flex-col
+        transition-transform duration-300 ease-in-out
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
+      `}
+    >
+      {/* Mobile Close Button */}
+      <div className="md:hidden flex items-center justify-between px-6 py-5 border-b border-gray-100">
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+            Noorza Admin
+          </p>
+
+          <h2 className="mt-1 text-lg font-semibold text-gray-900">
+            Control Panel
+          </h2>
+        </div>
+
+        <button
+          onClick={() => setSidebarOpen(false)}
+          className="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-[#faf8f3] hover:text-[#c89116] transition"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      {/* Desktop Sidebar Header */}
+      <div className="hidden md:block px-6 py-7 border-b border-gray-100">
         <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
           Noorza Admin
         </p>
@@ -63,6 +101,7 @@ const Sidebar = ({ setToken }) => {
             <NavLink
               key={item.path}
               to={item.path}
+              onClick={handleMenuClick}
               className={({ isActive }) =>
                 `group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                   isActive

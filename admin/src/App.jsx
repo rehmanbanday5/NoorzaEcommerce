@@ -12,7 +12,6 @@ import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
 import Edit from "./pages/Edit";
 
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -23,6 +22,8 @@ const App = () => {
   const [token, setToken] = useState(
     localStorage.getItem("token") ? localStorage.getItem("token") : "",
   );
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (token) {
@@ -40,10 +41,22 @@ const App = () => {
         <Login setToken={setToken} />
       ) : (
         <>
-          <Navbar />
+          <Navbar setSidebarOpen={setSidebarOpen} />
 
           <div className="flex w-full">
-            <Sidebar setToken={setToken} />
+            {/* Mobile Overlay */}
+            {sidebarOpen && (
+              <div
+                onClick={() => setSidebarOpen(false)}
+                className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              />
+            )}
+
+            <Sidebar
+              setToken={setToken}
+              sidebarOpen={sidebarOpen}
+              setSidebarOpen={setSidebarOpen}
+            />
 
             <main className="flex-1 min-w-0 px-5 sm:px-8 lg:px-10 py-8">
               <Routes>
@@ -80,7 +93,7 @@ const App = () => {
                   path="/list"
                   element={<Navigate to="/products" replace />}
                 />
-                
+
                 <Route path="/edit/:id" element={<Edit token={token} />} />
               </Routes>
             </main>

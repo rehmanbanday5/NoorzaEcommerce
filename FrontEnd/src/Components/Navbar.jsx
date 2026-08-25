@@ -301,7 +301,7 @@ const Navbar = () => {
                     <div className="my-1 border-t border-gray-100" />
 
                     <button
-                      onClick={() => navigate("/register")}
+                      onClick={() => navigate("/login")}
                       className="w-full rounded-xl px-4 py-3 text-left text-sm font-semibold text-[#c89116] transition-all hover:bg-[#faf8f3]"
                     >
                       Create Account
