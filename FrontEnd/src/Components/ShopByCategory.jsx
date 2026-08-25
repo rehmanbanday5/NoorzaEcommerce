@@ -20,8 +20,8 @@ const ShopByCategory = () => {
     },
     {
       name: "BRA SETS",
-      type: "subCategory",
-      value: "BRA SETS",
+      type: "category",
+      value: "Bra Sets",
       image: assets.BraSets,
     },
     {
@@ -55,14 +55,15 @@ const ShopByCategory = () => {
         </p>
       </div>
 
-      <div className="flex justify-center gap-8 sm:gap-12 md:gap-16 max-w-5xl mx-auto px-4">
+      {/* ================= CATEGORY LIST ================= */}
+      <div className="flex overflow-x-auto md:overflow-visible justify-start md:justify-center gap-6 sm:gap-12 md:gap-16 max-w-5xl mx-auto px-5 sm:px-4 pb-3 scrollbar-hide">
         {categories.map((category) => (
           <button
             key={category.name}
             onClick={() => handleCategoryClick(category)}
-            className="group flex flex-col items-center"
+            className="group flex flex-col items-center shrink-0"
           >
-            <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden flex items-center justify-center border-2 border-[#c89116]/50 bg-[#c89116]/5 shadow-sm">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden flex items-center justify-center border-2 border-[#c89116]/50 bg-[#c89116]/5 shadow-sm">
               <img
                 src={category.image}
                 alt={category.name}
@@ -76,6 +77,11 @@ const ShopByCategory = () => {
           </button>
         ))}
       </div>
+
+      {/* Mobile swipe hint */}
+      <p className="md:hidden text-center text-[10px] tracking-widest text-gray-400 mt-3 uppercase">
+        Swipe to explore
+      </p>
     </section>
   );
 };

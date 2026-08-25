@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Collection from './Pages/Collection'
@@ -19,7 +18,7 @@ import ScrollTop from './Components/ScrollTop'
 import SearchBar from './Components/SearchBar'
 import OrderSuccess from "./Pages/OrderSuccess";
 import OrderTracking from "./Pages/OrderTracking";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -27,7 +26,15 @@ const App = () => {
   return (
     <>
       <div className=" px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
-        <ToastContainer />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2500}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          pauseOnHover
+          draggable
+        />
         <Navbar />
         <SearchBar />
         <ScrollTop />

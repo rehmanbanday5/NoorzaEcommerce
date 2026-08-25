@@ -336,50 +336,91 @@ const Navbar = () => {
 
         {/* ================= MOBILE SIDEBAR ================= */}
         <div
-          className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
+          className={`fixed top-0 right-0 bottom-0 z-[100] overflow-y-auto bg-white transition-all duration-300 ${
             visible ? "w-full" : "w-0"
           }`}
         >
-          <div className="flex flex-col text-gray-600">
+          <div className="flex min-h-full flex-col text-gray-600">
+            {/* BACK */}
             <div
               onClick={() => setVisible(false)}
-              className="flex items-center gap-4 p-3 cursor-pointer"
+              className="flex items-center gap-4 p-5 cursor-pointer border-b border-gray-100"
             >
               <img
                 src={assets.dropdown_icon}
                 className="h-4 rotate-180"
-                alt="DropDown"
+                alt="Back"
               />
-              <p>Back</p>
+              <p className="text-sm font-medium">Back</p>
             </div>
 
+            {/* HOME */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-2 pl-6 border"
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/"
             >
               HOME
             </NavLink>
 
+            {/* BRA */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-2 pl-6 border"
-              to="/collection"
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
+              to="/collection?category=Bra"
             >
-              COLLECTION
+              BRA
             </NavLink>
 
+            {/* BRA SETS */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-2 pl-6 border"
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
+              to="/collection?category=Bra%20Sets"
+            >
+              BRA SETS
+            </NavLink>
+
+            {/* LINGERIE */}
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
+              to="/collection?category=Lingerie"
+            >
+              LINGERIE
+            </NavLink>
+
+            {/* NIGHTWEAR */}
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
+              to="/collection?category=Nightwear"
+            >
+              NIGHTWEAR
+            </NavLink>
+
+            {/* SHOP ALL */}
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
+              to="/collection"
+            >
+              SHOP ALL
+            </NavLink>
+
+            {/* ABOUT */}
+            <NavLink
+              onClick={() => setVisible(false)}
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/about"
             >
               ABOUT
             </NavLink>
 
+            {/* CONTACT */}
             <NavLink
               onClick={() => setVisible(false)}
-              className="py-2 pl-6 border"
+              className="py-4 pl-6 border-b border-gray-100 text-sm font-medium"
               to="/contact"
             >
               CONTACT

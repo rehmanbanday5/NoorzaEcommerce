@@ -36,7 +36,7 @@ const Hero = () => {
 
         <button
           onClick={() => navigate("/collection")}
-          className="absolute bottom-[6%] left-[6%] inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-black bg-black px-8 py-3 text-sm font-semibold text-white transition duration-300 hover:border-[#c89116] hover:text-[#c89116]"
+          className="absolute bottom-[6%] left-[6%] inline-flex w-auto items-center justify-center gap-2 rounded-full border border-black bg-black px-5 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-semibold text-white transition duration-300 hover:border-[#c89116] hover:text-[#c89116]"
         >
           SHOP NOW
         </button>
