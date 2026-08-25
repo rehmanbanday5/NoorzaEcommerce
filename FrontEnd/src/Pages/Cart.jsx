@@ -3,6 +3,7 @@ import { ShopContext } from "../Context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "../Components/Title";
 import CartTotal from "../Components/CartTotal";
+import { Minus, Plus } from "lucide-react";
 
 const Cart = () => {
   const { products, curreny, cartItems, updateQuantity, navigate } =
@@ -92,21 +93,41 @@ const Cart = () => {
                     </div>
                   </div>
 
-                  <input
-                    onChange={(e) =>
-                      e.target.value === "" || e.target.value === "0"
-                        ? null
-                        : updateQuantity(
-                            item._id,
-                            item.size,
-                            Number(e.target.value),
-                          )
-                    }
-                    className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
-                    type="number"
-                    min={1}
-                    defaultValue={item.quantity}
-                  />
+                  <div className="flex items-center w-fit rounded-xl border border-gray-200 overflow-hidden bg-white">
+                    {/* MINUS */}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        updateQuantity(
+                          item._id,
+                          item.size,
+                          Math.max(1, item.quantity - 1),
+                        )
+                      }
+                      disabled={item.quantity <= 1}
+                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#c89116] disabled:text-gray-300 disabled:hover:bg-white transition-colors"
+                      aria-label="Decrease quantity"
+                    >
+                      <Minus size={15} strokeWidth={2} />
+                    </button>
+
+                    {/* QUANTITY */}
+                    <div className="w-10 sm:w-12 h-9 sm:h-10 flex items-center justify-center border-x border-gray-200 text-sm font-semibold text-gray-800">
+                      {item.quantity}
+                    </div>
+
+                    {/* PLUS */}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        updateQuantity(item._id, item.size, item.quantity + 1)
+                      }
+                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#c89116] transition-colors"
+                      aria-label="Increase quantity"
+                    >
+                      <Plus size={15} strokeWidth={2} />
+                    </button>
+                  </div>
 
                   <img
                     onClick={() => updateQuantity(item._id, item.size, 0)}

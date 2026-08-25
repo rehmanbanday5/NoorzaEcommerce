@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Instagram from "./pages/Instagram";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
+import Edit from "./pages/Edit";
 
 
 import { ToastContainer } from "react-toastify";
@@ -79,6 +80,8 @@ const App = () => {
                   path="/list"
                   element={<Navigate to="/products" replace />}
                 />
+                
+                <Route path="/edit/:id" element={<Edit token={token} />} />
               </Routes>
             </main>
           </div>

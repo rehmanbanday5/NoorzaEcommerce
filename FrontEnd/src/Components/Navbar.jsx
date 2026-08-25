@@ -149,15 +149,16 @@ const Navbar = () => {
 
           {/* BRA SETS */}
           <NavLink
-            to="/collection?subCategory=BRA%20SETS"
+            to="/collection?category=Bra%20Sets"
             className={navClass(
-              isActive("/collection", "?subCategory=BRA%20SETS"),
+              isActive("/collection", "?category=Bra%20Sets"),
             )}
           >
             <p>BRA SETS</p>
+
             <hr
               className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "?subCategory=BRA%20SETS")
+                isActive("/collection", "?category=Bra%20Sets")
                   ? "block"
                   : "hidden"
               }`}

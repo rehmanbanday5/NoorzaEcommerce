@@ -22,7 +22,7 @@ const Orders = ({token}) => {
         if(response.data.success){
           setOrders(response.data.orders)
         }else{
-          Toast.error(response.data.message)
+          toast.error(response.data.message)
         }
       } catch (error) {
         toast.error(error.message)

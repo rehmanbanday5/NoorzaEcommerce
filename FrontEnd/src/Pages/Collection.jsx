@@ -157,9 +157,9 @@ const Collection = () => {
               <input
                 className="w-3"
                 type="checkbox"
-                value="BRA SETS"
-                checked={subCategory.includes("BRA SETS")}
-                onChange={toggleSubCategory}
+                value="Bra Sets"
+                checked={category.includes("Bra Sets")}
+                onChange={toggleCategory}
               />
               Bra Sets
             </p>

@@ -51,7 +51,7 @@ const List = ({ token }) => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      {/* Header */}
+      {/* HEADER */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
           <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
@@ -79,7 +79,7 @@ const List = ({ token }) => {
         </button>
       </div>
 
-      {/* Product count */}
+      {/* PRODUCT COUNT */}
       <div className="mb-4 flex items-center justify-between">
         <p className="text-sm text-gray-500">
           <span className="font-semibold text-gray-900">{list.length}</span>{" "}
@@ -87,28 +87,30 @@ const List = ({ token }) => {
         </p>
       </div>
 
-      {/* Desktop Header */}
-      <div className="hidden md:grid grid-cols-[80px_2fr_1fr_1fr_100px] items-center gap-4 px-5 py-3 rounded-t-2xl bg-[#111111] text-xs uppercase tracking-wider text-gray-300">
+      {/* DESKTOP HEADER */}
+      <div className="hidden md:grid grid-cols-[80px_2fr_1fr_1fr_150px] items-center gap-4 px-5 py-3 rounded-t-2xl bg-[#111111] text-xs uppercase tracking-wider text-gray-300">
         <span>Image</span>
         <span>Product</span>
         <span>Category</span>
         <span>Price</span>
-        <span className="text-center">Action</span>
+        <span className="text-center">Actions</span>
       </div>
 
-      {/* Products */}
+      {/* PRODUCTS */}
       <div className="bg-white border border-gray-200 md:border-t-0 rounded-2xl md:rounded-t-none overflow-hidden">
         {list.map((item) => (
           <div
             key={item._id}
-            className="grid grid-cols-[70px_1fr] md:grid-cols-[80px_2fr_1fr_1fr_100px] items-center gap-4 px-4 sm:px-5 py-4 border-b border-gray-100 last:border-b-0 hover:bg-[#faf8f3] transition-colors"
+            className="grid grid-cols-[70px_1fr] md:grid-cols-[80px_2fr_1fr_1fr_150px] items-center gap-4 px-4 sm:px-5 py-4 border-b border-gray-100 last:border-b-0 hover:bg-[#faf8f3] transition-colors"
           >
+            {/* IMAGE */}
             <img
               className="w-14 h-14 object-cover rounded-xl border border-gray-100"
-              src={item.image[0]}
+              src={item.image?.[0]}
               alt={item.name}
             />
 
+            {/* PRODUCT */}
             <div>
               <p className="font-medium text-sm text-gray-900">{item.name}</p>
 
@@ -117,24 +119,40 @@ const List = ({ token }) => {
               </p>
             </div>
 
+            {/* CATEGORY */}
             <p className="hidden md:block text-sm text-gray-500">
               {item.category}
             </p>
 
+            {/* PRICE */}
             <p className="hidden md:block text-sm font-semibold text-[#c89116]">
               {currency} {item.price}
             </p>
 
-            <button
-              onClick={() => removeProduct(item._id)}
-              className="col-start-2 md:col-start-auto justify-self-end md:justify-self-center h-9 w-9 rounded-lg text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all"
-              title="Remove product"
-            >
-              ×
-            </button>
+            {/* ACTIONS */}
+            <div className="col-start-2 md:col-start-auto flex items-center justify-end md:justify-center gap-2">
+              {/* EDIT */}
+              <button
+                onClick={() => navigate(`/edit/${item._id}`)}
+                className="h-9 px-4 rounded-lg border border-gray-200 bg-white text-xs font-semibold text-gray-700 transition-all duration-200 hover:border-[#c89116] hover:bg-[#faf8f3] hover:text-[#c89116]"
+                title="Edit product"
+              >
+                Edit
+              </button>
+
+              {/* REMOVE */}
+              <button
+                onClick={() => removeProduct(item._id)}
+                className="h-9 w-9 rounded-lg text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all"
+                title="Remove product"
+              >
+                ×
+              </button>
+            </div>
           </div>
         ))}
 
+        {/* EMPTY */}
         {list.length === 0 && (
           <div className="py-20 text-center">
             <div className="mx-auto h-14 w-14 rounded-2xl bg-[#faf8f3] flex items-center justify-center text-[#c89116] text-xl">

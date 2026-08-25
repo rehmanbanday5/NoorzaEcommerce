@@ -23,6 +23,7 @@ import Product_20 from './Product_20.png'
 
 
 import Noorza from "./Noorza.png"
+import Noor from "./Noor.jpeg"
 import Banner1 from "./Banner1.png"
 import Banner2 from "./Banner2.png"
 import Banner3 from "./Banner3.png"
@@ -71,6 +72,7 @@ export const assets = {
   Product_19,
   Product_20,
   Noorza,
+  Noor,
   BraCategory,
   LingerieCategory,
   BraSets,

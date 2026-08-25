@@ -26,8 +26,8 @@ const ShopByCategory = () => {
     },
     {
       name: "NIGHTWEAR",
-      type: "subCategory",
-      value: "BRA SETS",
+      type: "category",
+      value: "Nightwear",
       image: assets.NightWear,
     },
   ];
