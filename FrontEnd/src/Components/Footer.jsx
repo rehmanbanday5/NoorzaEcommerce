@@ -62,34 +62,47 @@ const Footer = () => {
             </div>
 
             <ul className="flex flex-col gap-3 text-gray-300">
-              <Link to="/" className="hover:text-[#8A6500] transition">
-                Home
-              </Link>
+                <li>
+                  <a href="/" className="hover:text-[#8A6500] transition">
+                    Home
+                  </a>
+                </li>
 
-              <Link to="/Delivery" className="hover:text-[#8A6500] transition">
-                Delivery
-              </Link>
+                <li>
+                  <a
+                    href="/Delivery"
+                    className="hover:text-[#8A6500] transition"
+                  >
+                    Delivery
+                  </a>
+                </li>
 
-              <Link
-                to="/Privacy-Policy"
-                className="hover:text-[#8A6500] transition"
-              >
-                Privacy Policy
-              </Link>
+                <li>
+                  <a
+                    href="/Privacy-Policy"
+                    className="hover:text-[#8A6500] transition"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
 
-              <Link
-                to="/Refund-Policy"
-                className="hover:text-[#8A6500] transition"
-              >
-                Refund Policy
-              </Link>
+                <li>
+                  <a
+                    href="/Refund-Policy"
+                    className="hover:text-[#8A6500] transition"
+                  >
+                    Refund Policy
+                  </a>
+                </li>
 
-              <Link
-                to="/Payment-Policy"
-                className="hover:text-[#8A6500] transition"
-              >
-                Payment Policy
-              </Link>
+                <li>
+                  <a
+                    href="/Payment-Policy"
+                    className="hover:text-[#8A6500] transition"
+                  >
+                    Payment Policy
+                  </a>
+                </li>
             </ul>
           </div>
 
