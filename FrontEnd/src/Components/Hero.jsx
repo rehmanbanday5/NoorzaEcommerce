@@ -26,10 +26,11 @@ const Hero = () => {
             key={index}
             src={banner}
             alt={`Noorza Banner ${index + 1}`}
-            fetchPriority={index === 0 ? "high" : "auto"}
-            loading={index === 0 ? "eager" : "lazy"}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
+            fetchPriority={index === 0 ? "high" : "low"}
+            className={`w-full h-full block object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide
+                ? "opacity-100"
+                : "absolute inset-0 opacity-0"
             }`}
           />
         ))}
