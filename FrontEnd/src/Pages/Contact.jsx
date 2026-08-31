@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "../Components/Title";
 import { assets } from "../assets/assets";
 import { Phone, Mail, Clock } from "lucide-react";

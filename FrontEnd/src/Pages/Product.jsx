@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../Context/ShopContext";
 import { assets } from "../assets/assets";
@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   Truck,
   RotateCcw,
-  Check,
   Minus,
   Plus,
 } from "lucide-react";
