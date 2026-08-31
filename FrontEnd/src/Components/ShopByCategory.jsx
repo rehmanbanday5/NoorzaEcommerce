@@ -79,7 +79,7 @@ const ShopByCategory = () => {
       </div>
 
       {/* Mobile swipe hint */}
-      <p className="md:hidden text-center text-[10px] tracking-widest text-gray-400 mt-3 uppercase">
+      <p className="md:hidden text-center text-[10px] tracking-widest text-gray-600 mt-3 uppercase">
         Swipe to explore
       </p>
     </section>

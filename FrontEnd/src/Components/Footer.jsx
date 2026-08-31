@@ -16,7 +16,7 @@ const Footer = () => {
               <h2 className="text-3xl font-medium">Noorza</h2>
               <div className="w-12 h-[3px] bg-[#c89116] mt-2"></div>
             </div>
-            <p className="w-full md:w-2/3 text-gray-600">
+            <p className="w-full md:w-2/3 text-gray-300">
               Premium Fashion And Essentials Designed To Bring Style, Comfort
               And Confidence To Your Everyday Life.
             </p>
