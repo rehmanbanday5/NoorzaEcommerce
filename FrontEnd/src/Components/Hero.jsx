@@ -26,6 +26,7 @@ const Hero = () => {
             key={index}
             src={banner}
             alt={`Noorza Banner ${index + 1}`}
+            fetchPriority={index === 0 ? "high" : "low"}
             className={`w-full h-auto block object-cover transition-opacity duration-1000 ease-in-out ${
               index === currentSlide
                 ? "opacity-100"
