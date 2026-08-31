@@ -1,21 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Prata&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Prata&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* a.active hr{
-    display: block;
-} */
 
-*{
-    font-family: Manrope;
+/* =========================================================
+   NOORZA TYPOGRAPHY
+   Luxury • Elegant • Feminine • Modern
+   ========================================================= */
+
+/* Default website text */
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
 }
 
 
+/* =========================================================
+   HEADINGS
+   Elegant luxury fashion look
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 
 
+/* =========================================================
+   BUTTONS / NAVBAR / LABELS
+   Clean premium fashion-brand look
+   ========================================================= */
+
+button,
+nav,
+nav a,
+select,
+input,
+label {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   PRODUCT / BRAND TITLES
+   ========================================================= */
 
 .prata-regular {
   font-family: "Prata", serif;
@@ -24,7 +64,9 @@
 }
 
 
-
+/* =========================================================
+   MARQUEE
+   ========================================================= */
 
 @keyframes marquee {
   from {
@@ -41,6 +83,9 @@
 }
 
 
+/* =========================================================
+   INSTAGRAM SLIDER
+   ========================================================= */
 
 @keyframes instagram-slider {
   0% {
@@ -59,4 +104,3 @@
 .instagram-slider:hover {
   animation-play-state: paused;
 }
-

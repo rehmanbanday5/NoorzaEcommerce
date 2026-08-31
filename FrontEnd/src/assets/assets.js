@@ -24,14 +24,14 @@ import Product_20 from './Product_20.png'
 
 import Noorza from "./Noorza.png"
 import Noor from "./Noor.jpeg"
-import Banner1 from "./Banner1.png"
-import Banner2 from "./Banner2.png"
-import Banner3 from "./Banner3.png"
-import Banner4 from "./Banner4.png"
-import BraCategory from "./BraCategory.png";
-import BraSets from "./BraSets.png";
-import LingerieCategory from "./LingerieCategory.png";
-import NightWear from "./NightWear.png";
+import Banner1 from "./Banner1.webp";
+import Banner2 from "./Banner2.webp";
+import Banner3 from "./Banner3.webp";
+import Banner4 from "./Banner4.webp";
+import BraCategory from "./BraCategory.webp";
+import BraSets from "./BraSets.webp";
+import LingerieCategory from "./LingerieCategory.webp";
+import NightWear from "./NightWear.webp";
 import easypaisa from "./easypaisa.png";
 import jazzcash from "./jazzcash.png";
 import Delivery from './Delivery.png'

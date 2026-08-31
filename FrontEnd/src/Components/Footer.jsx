@@ -1,7 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
-import { FaInstagram,FaWhatsapp,FaLocationDot,FaEnvelope,FaPhone} from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaWhatsapp,
+  FaTiktok,
+  FaEnvelope,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -29,10 +32,22 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://web.whatsapp.com/send?phone=923334913423"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
               >
                 <FaWhatsapp />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@noorzaessentials"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
+              >
+                {" "}
+                <FaTiktok />{" "}
               </a>
             </div>
           </div>
@@ -66,7 +81,7 @@ const Footer = () => {
                 Refund Policy
               </Link>
 
-               <Link
+              <Link
                 to="/Payment-Policy"
                 className="hover:text-[#c89116] transition"
               >
@@ -82,27 +97,16 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4 text-gray-300">
-              <div className="flex items-start gap-5">
-                <FaLocationDot className="mt-1 text-[#c89116]" />
-
-                <p>Commercial Market, Rawalpindi, Pakistan</p>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaPhone className="text-[#c89116]" />
-
-                <p href="tel:+923371234567">+92 337 1234567</p>
-              </div>
-
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-[#c89116]" />
 
-                <a href="mailto:support@noorza.com">support@noorza.com</a>
+                <a href="mailto:noorzaessentials@gmail.com">
+                  noorzaessentials@gmail.com
+                </a>
               </div>
             </div>
           </div>
         </div>
-
 
         <div className="border-t border-gray-700 mt-20 pt-5 -mx-4 sm:-mx-[5vw] md:-mx-[7vw] lg:-mx-[9vw]">
           <p className="text-center text-md text-gray-400">
