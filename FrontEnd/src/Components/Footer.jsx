@@ -109,11 +109,11 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-20 pt-5 -mx-4 sm:-mx-[5vw] md:-mx-[7vw] lg:-mx-[9vw]">
-          <p className="text-center text-md text-gray-400">
+          <p className="text-center text-md text-gray-300">
             Copyright © 2026{" "}
             <a
               href="/"
-              className="text-white hover:text-[#8A6500] transition duration-300"
+              className="text-white hover:text-[#6B4D00] transition duration-300 underline"
             >
               Noorza
             </a>
