@@ -36,7 +36,7 @@ const RefundPolicy = () => {
 
           <h2 className="text-2xl sm:text-3xl font-medium text-gray-900 mb-5">
             Your satisfaction matters to{" "}
-            <span className="text-[#c89116]">Noorza.</span>
+            <span className="text-[#8A6500]">Noorza.</span>
           </h2>
 
           <p className="mb-5 leading-8">

@@ -73,7 +73,7 @@ const Settings = ({ token }) => {
       {/* HEADER */}
 
       <div className="mb-8">
-        <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+        <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
           Account
         </p>
 

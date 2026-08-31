@@ -33,7 +33,7 @@ const Contact = () => {
 
           {/* CONTACT INFO */}
           <div className="flex flex-col justify-center">
-            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#c89116]">
+            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#8A6500]">
               Get In Touch
             </p>
 

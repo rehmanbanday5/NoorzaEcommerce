@@ -123,13 +123,13 @@ const Orders = () => {
           <div className="h-px w-12 bg-[#c89116]/40" />
 
           <div className="mx-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#faf8f3]">
-            <span className="text-lg text-[#c89116]">✦</span>
+            <span className="text-lg text-[#8A6500]">✦</span>
           </div>
 
           <div className="h-px w-12 bg-[#c89116]/40" />
         </div>
 
-        <p className="mt-7 text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold text-[#c89116]">
+        <p className="mt-7 text-[10px] sm:text-[11px] uppercase tracking-[0.35em] font-bold text-[#8A6500]">
           Order Confirmed
         </p>
 
@@ -169,7 +169,7 @@ const Orders = () => {
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                           <div className="min-w-0">
-                            <p className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#c89116]">
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#8A6500]">
                               Noorza Collection
                             </p>
 

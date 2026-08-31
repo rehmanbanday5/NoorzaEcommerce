@@ -40,7 +40,7 @@ const OrderSuccess = () => {
             />
           </div>
 
-          <p className="mt-7 text-[11px] uppercase tracking-[0.3em] font-bold text-[#c89116]">
+          <p className="mt-7 text-[11px] uppercase tracking-[0.3em] font-bold text-[#8A6500]">
             Order Confirmed
           </p>
 

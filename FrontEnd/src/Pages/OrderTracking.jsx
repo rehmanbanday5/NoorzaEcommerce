@@ -172,7 +172,7 @@ const statusColors = [
       <div className="max-w-5xl mx-auto px-4">
         {/* ================= HEADER ================= */}
         <div className="mb-12">
-          <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#c89116]">
+          <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#8A6500]">
             Order Tracking
           </p>
 
@@ -185,7 +185,7 @@ const statusColors = [
 
             <p className="text-sm text-gray-500">
               Current Status:{" "}
-              <span className="font-semibold text-[#c89116]">
+              <span className="font-semibold text-[#8A6500]">
                 {order.status}
               </span>
             </p>
@@ -323,7 +323,7 @@ const statusColors = [
               <div className="pt-3 border-t flex justify-between">
                 <span className="font-semibold text-gray-900">Total</span>
 
-                <span className="font-semibold text-[#c89116]">
+                <span className="font-semibold text-[#8A6500]">
                   Rs {order.amount}
                 </span>
               </div>

@@ -71,25 +71,18 @@ const Product = () => {
 
   return (
     <div className="border-t pt-8 sm:pt-12">
-
       {/* ================= PRODUCT AREA ================= */}
 
       <div className="max-w-7xl mx-auto">
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-
           {/* ================= LEFT IMAGE ================= */}
 
           <div className="lg:sticky lg:top-24 lg:self-start">
-
             <div className="flex flex-col-reverse sm:flex-row gap-4">
-
               {/* THUMBNAILS */}
 
               <div className="flex sm:flex-col gap-3 overflow-x-auto sm:overflow-y-auto sm:w-[90px] w-full">
-
                 {productData.image.map((item, index) => (
-
                   <button
                     type="button"
                     key={index}
@@ -100,53 +93,39 @@ const Product = () => {
                         : "border-gray-200 hover:border-gray-400"
                     }`}
                   >
-
                     <img
                       src={item}
                       alt={`${productData.name} ${index + 1}`}
                       className="w-[75px] h-[90px] sm:w-[86px] sm:h-[105px] object-cover"
                     />
-
                   </button>
-
                 ))}
-
               </div>
 
               {/* MAIN IMAGE */}
 
               <div className="flex-1 bg-[#f8f8f6] rounded-2xl overflow-hidden">
-
                 <img
                   src={image}
                   alt={productData.name}
                   className="w-full aspect-[4/5] object-cover"
                 />
-
               </div>
-
             </div>
-
           </div>
-
 
           {/* ================= RIGHT CONTENT ================= */}
 
           <div className="min-w-0">
-          
-
             {/* CATEGORY */}
 
             <div className="flex items-center gap-2">
-
               <span className="h-1.5 w-1.5 rounded-full bg-[#c89116]" />
 
-              <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+              <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
                 {productData.category}
               </p>
-
             </div>
-
 
             {/* PRODUCT NAME */}
 
@@ -154,11 +133,9 @@ const Product = () => {
               {productData.name}
             </h1>
 
-
             {/* RATING */}
 
             <div className="flex items-center gap-1 mt-4">
-
               <img src={assets.star_icon} className="w-4" alt="" />
               <img src={assets.star_icon} className="w-4" alt="" />
               <img src={assets.star_icon} className="w-4" alt="" />
@@ -168,34 +145,24 @@ const Product = () => {
               <span className="ml-2 text-xs text-gray-400">
                 4.0 · Customer Reviews
               </span>
-
             </div>
-
 
             {/* PRICE */}
 
             <div className="mt-7">
-
               <p className="text-3xl font-semibold text-gray-900">
                 {currency}
                 {productData.price}
               </p>
-
             </div>
-
 
             {/* SIZE */}
 
             <div className="mt-8">
-
-              <p className="text-sm font-semibold text-gray-900">
-                Select Size
-              </p>
+              <p className="text-sm font-semibold text-gray-900">Select Size</p>
 
               <div className="flex flex-wrap gap-2 mt-4">
-
                 {productData.sizes.map((item, index) => (
-
                   <button
                     type="button"
                     key={index}
@@ -208,24 +175,16 @@ const Product = () => {
                   >
                     {item}
                   </button>
-
                 ))}
-
               </div>
-
             </div>
-
 
             {/* QUANTITY */}
 
             <div className="mt-7">
-
-              <p className="text-sm font-semibold text-gray-900">
-                Quantity
-              </p>
+              <p className="text-sm font-semibold text-gray-900">Quantity</p>
 
               <div className="mt-4 flex items-center w-fit border border-gray-200 rounded-xl overflow-hidden">
-
                 <button
                   type="button"
                   onClick={decreaseQuantity}
@@ -246,18 +205,13 @@ const Product = () => {
                 >
                   <Plus size={16} />
                 </button>
-
               </div>
-
             </div>
-
 
             {/* TOTAL */}
 
             <div className="mt-6 flex items-center justify-between rounded-xl bg-[#faf8f3] border border-[#ead9ad]/60 px-5 py-4">
-
               <div>
-
                 <p className="text-xs text-gray-400 uppercase tracking-wider">
                   Total
                 </p>
@@ -266,16 +220,13 @@ const Product = () => {
                   {quantity} × {currency}
                   {productData.price}
                 </p>
-
               </div>
 
               <p className="text-xl font-semibold text-gray-900">
                 {currency}
                 {productData.price * quantity}
               </p>
-
             </div>
-
 
             {/* ADD TO CART */}
 
@@ -289,24 +240,16 @@ const Product = () => {
                   : "bg-gray-200 text-gray-400 cursor-not-allowed"
               }`}
             >
-
               <ShoppingBag size={18} />
 
               {size ? "ADD TO CART" : "SELECT A SIZE"}
-
             </button>
-
 
             {/* BENEFITS */}
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
-
               <div className="rounded-xl bg-[#faf8f3] border border-[#ead9ad]/50 p-4">
-
-                <ShieldCheck
-                  size={19}
-                  className="text-[#c89116]"
-                />
+                <ShieldCheck size={19} className="text-[#c89116]" />
 
                 <p className="mt-3 text-xs font-semibold text-gray-800">
                   Original Product
@@ -315,16 +258,10 @@ const Product = () => {
                 <p className="mt-1 text-[10px] leading-4 text-gray-400">
                   Quality you can trust
                 </p>
-
               </div>
 
-
               <div className="rounded-xl bg-[#faf8f3] border border-[#ead9ad]/50 p-4">
-
-                <Truck
-                  size={19}
-                  className="text-[#c89116]"
-                />
+                <Truck size={19} className="text-[#c89116]" />
 
                 <p className="mt-3 text-xs font-semibold text-gray-800">
                   Cash On Delivery
@@ -333,16 +270,10 @@ const Product = () => {
                 <p className="mt-1 text-[10px] leading-4 text-gray-400">
                   Pay when you receive
                 </p>
-
               </div>
 
-
               <div className="rounded-xl bg-[#faf8f3] border border-[#ead9ad]/50 p-4">
-
-                <RotateCcw
-                  size={19}
-                  className="text-[#c89116]"
-                />
+                <RotateCcw size={19} className="text-[#c89116]" />
 
                 <p className="mt-3 text-xs font-semibold text-gray-800">
                   Easy Returns
@@ -351,16 +282,12 @@ const Product = () => {
                 <p className="mt-1 text-[10px] leading-4 text-gray-400">
                   7-day return policy
                 </p>
-
               </div>
-
             </div>
-
 
             {/* DESCRIPTION */}
 
             <div className="mt-8 pt-7 pb-8 border-t border-gray-100">
-
               <p className="text-xs uppercase tracking-[0.2em] font-semibold text-gray-900">
                 Product Description
               </p>
@@ -368,27 +295,19 @@ const Product = () => {
               <p className="mt-4 text-sm leading-7 text-gray-500">
                 {productData.description}
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
 
       {/* ================= RELATED PRODUCTS ================= */}
 
       <div className="mt-20 sm:mt-28">
-
         <RelatedProducts
           category={productData.category}
           subCategory={productData.subCategory}
         />
-
       </div>
-
     </div>
   );
 };

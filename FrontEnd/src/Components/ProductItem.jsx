@@ -54,13 +54,13 @@ const ProductItem = ({ id, image, name, price }) => {
         {/* ================= PRODUCT DETAILS ================= */}
         <div className="px-4 pb-4 pt-4 sm:px-5 sm:pb-5">
           {/* Product Name */}
-          <p className="line-clamp-1 text-sm sm:text-base font-medium tracking-wide text-gray-800 transition-colors duration-300 group-hover:text-[#c89116]">
+          <p className="line-clamp-1 text-sm sm:text-base font-medium tracking-wide text-gray-800 transition-colors duration-300 group-hover:text-[#8A6500]">
             {name}
           </p>
 
           {/* Price */}
           <div className="mt-2 flex items-center justify-between">
-            <p className="text-sm sm:text-base font-semibold text-[#c89116]">
+            <p className="text-sm sm:text-base font-semibold text-[#8A6500]">
               {currency} {price}
             </p>
 

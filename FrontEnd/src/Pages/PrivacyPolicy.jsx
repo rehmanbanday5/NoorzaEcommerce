@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
 
           <h2 className="text-2xl sm:text-3xl font-medium text-gray-900 mb-5">
             Your trust is important to{" "}
-            <span className="text-[#c89116]">Noorza.</span>
+            <span className="text-[#8A6500]">Noorza.</span>
           </h2>
 
           <p className="text-gray-600 leading-8 mb-5">

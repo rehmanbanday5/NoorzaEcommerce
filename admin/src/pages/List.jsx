@@ -54,7 +54,7 @@ const List = ({ token }) => {
       {/* HEADER */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+          <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
             Store Management
           </p>
 
@@ -125,7 +125,7 @@ const List = ({ token }) => {
             </p>
 
             {/* PRICE */}
-            <p className="hidden md:block text-sm font-semibold text-[#c89116]">
+            <p className="hidden md:block text-sm font-semibold text-[#8A6500]">
               {currency} {item.price}
             </p>
 

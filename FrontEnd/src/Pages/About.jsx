@@ -7,12 +7,12 @@ const About = () => {
       {/* ================= HERO ================= */}
       <section className="border-t pt-14 sm:pt-20 pb-12">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <p className="text-[11px] uppercase tracking-[0.35em] font-bold text-[#c89116]">
+          <p className="text-[11px] uppercase tracking-[0.35em] font-bold text-[#8A6500]">
             Our Story
           </p>
 
           <h1 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight">
-            About <span className="text-[#c89116]">Noorza</span>
+            About <span className="text-[#8A6500]">Noorza</span>
           </h1>
 
           <p className="mt-5 max-w-2xl mx-auto text-sm sm:text-base leading-7 text-gray-500">
@@ -41,7 +41,7 @@ const About = () => {
 
           {/* CONTENT */}
           <div>
-            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#c89116]">
+            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#8A6500]">
               Who We Are
             </p>
 
@@ -84,7 +84,7 @@ const About = () => {
       <section className="bg-[#faf8f3] border-y border-[#ead9ad]/50 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#c89116]">
+            <p className="text-[11px] uppercase tracking-[0.3em] font-bold text-[#8A6500]">
               The Person Behind Noorza
             </p>
 
@@ -109,7 +109,7 @@ const About = () => {
 
             {/* OWNER CONTENT */}
             <div className="px-7 pb-10 md:py-10 md:pr-12">
-              <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+              <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
                 Founder & Owner
               </p>
 
@@ -139,7 +139,7 @@ const About = () => {
                   trusting us to be part of their everyday comfort.”
                 </p>
 
-                <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-[#c89116]">
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-[#8A6500]">
                   — Abdul Noor
                 </p>
               </div>
@@ -147,11 +147,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      </div>
-
-      
-
-    );
+    </div>
+  );
 };
 
 export default About;
