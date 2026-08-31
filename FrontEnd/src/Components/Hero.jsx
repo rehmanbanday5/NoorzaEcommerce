@@ -20,17 +20,16 @@ const Hero = () => {
 
   return (
     <section className="relative left-1/2 -ml-[50vw] w-screen overflow-hidden">
-      <div className="relative w-full aspect-[1200/437]">
+      <div className="relative w-full aspect-[1200/437] min-h-[263px]">
         {banners.map((banner, index) => (
           <img
             key={index}
             src={banner}
             alt={`Noorza Banner ${index + 1}`}
-            fetchPriority={index === 0 ? "high" : "low"}
-            className={`w-full h-full block object-cover transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide
-                ? "opacity-100"
-                : "absolute inset-0 opacity-0"
+            fetchPriority={index === 0 ? "high" : "auto"}
+            loading={index === 0 ? "eager" : "lazy"}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
