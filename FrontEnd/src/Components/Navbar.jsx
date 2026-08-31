@@ -313,7 +313,7 @@ const Navbar = () => {
           </div>
 
           {/* CART */}
-          <Link to="/cart" className="relative">
+          <Link to="/cart" aria-label="Shopping cart" className="relative">
             <span className="p-2 rounded-full text-gray-700 transition duration-200 hover:text-[#D4AF37] inline-flex">
               <ShoppingBag size={20} />
             </span>

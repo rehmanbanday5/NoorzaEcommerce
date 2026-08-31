@@ -26,6 +26,7 @@ const Footer = () => {
                 href="https://www.instagram.com/noorza_essentials/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow Noorza on Instagram"
                 className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
               >
                 <FaInstagram />
@@ -35,6 +36,7 @@ const Footer = () => {
                 href="https://web.whatsapp.com/send?phone=923334913423"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Contact Noorza on WhatsApp"
                 className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
               >
                 <FaWhatsapp />
@@ -44,6 +46,7 @@ const Footer = () => {
                 href="https://www.tiktok.com/@noorzaessentials"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow Noorza on TikTok"
                 className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
               >
                 {" "}
