@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <section className="relative left-1/2 -ml-[50vw] w-screen overflow-hidden">
-      <div className="relative w-full aspect-[1200/437] min-h-[263px]">
+      <div className="relative w-full aspect-[1200/437]">
         {banners.map((banner, index) => (
           <img
             key={index}
