@@ -20,14 +20,14 @@ const Hero = () => {
 
   return (
     <section className="relative left-1/2 -ml-[50vw] w-screen overflow-hidden">
-      <div className="relative w-full">
+      <div className="relative w-full aspect-[1200/437]">
         {banners.map((banner, index) => (
           <img
             key={index}
             src={banner}
             alt={`Noorza Banner ${index + 1}`}
             fetchPriority={index === 0 ? "high" : "low"}
-            className={`w-full h-auto block object-cover transition-opacity duration-1000 ease-in-out ${
+            className={`w-full h-full block object-cover transition-opacity duration-1000 ease-in-out ${
               index === currentSlide
                 ? "opacity-100"
                 : "absolute inset-0 opacity-0"
