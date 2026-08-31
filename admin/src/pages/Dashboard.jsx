@@ -80,7 +80,7 @@ const Dashboard = ({ token }) => {
     <div className="max-w-7xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+        <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
           Overview
         </p>
 
@@ -123,7 +123,7 @@ const Dashboard = ({ token }) => {
                 </p>
               </div>
 
-              <div className="h-11 w-11 rounded-xl bg-[#faf8f3] flex items-center justify-center text-[#c89116] text-lg group-hover:bg-[#c89116] group-hover:text-white transition-all">
+              <div className="h-11 w-11 rounded-xl bg-[#faf8f3] flex items-center justify-center text-[#8A6500] text-lg group-hover:bg-[#c89116] group-hover:text-white transition-all">
                 {item.icon}
               </div>
             </div>
@@ -136,7 +136,7 @@ const Dashboard = ({ token }) => {
         <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-[#c89116]/10 blur-3xl" />
 
         <div className="relative">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#c89116] font-semibold">
+          <p className="text-xs uppercase tracking-[0.2em] text-[#8A6500] font-semibold">
             Total Order Value
           </p>
 
@@ -161,7 +161,7 @@ const Dashboard = ({ token }) => {
             </p>
           </div>
 
-          <span className="text-xs text-[#c89116] font-semibold">
+          <span className="text-xs text-[#8A6500] font-semibold">
             {orders.length} Orders
           </span>
         </div>
@@ -189,7 +189,7 @@ const Dashboard = ({ token }) => {
                   {currency} {order.amount}
                 </p>
 
-                <span className="px-3 py-1 rounded-full bg-[#faf8f3] text-[#c89116] text-[10px] font-semibold">
+                <span className="px-3 py-1 rounded-full bg-[#faf8f3] text-[#8A6500] text-[10px] font-semibold">
                   {order.status}
                 </span>
               </div>

@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
       <div className="text-center py-8 mb-8">
         <div className="inline-flex gap-2 items-center mb-3 sm:gap-3 pr-4">
           <p className="text-[#1a1a1a] text-4xl sm:text-5xl">
-            PRIVACY <span className="text-[#c89116] font-medium">POLICY</span>
+            PRIVACY <span className="text-[#8A6500] font-medium">POLICY</span>
           </p>
 
           <p className="w-8 sm:w-12 h-[1px] sm:h-[2px] bg-[#1a1a1a]"></p>
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
 
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-black/75 backdrop-blur-sm rounded-xl px-5 py-4 text-white">
-                <p className="text-xs tracking-[0.2em] text-[#c89116] mb-1">
+                <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-1">
                   NOORZA
                 </p>
 
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
 
         {/* INTRO TEXT */}
         <div className="w-full lg:w-[55%]">
-          <p className="text-xs tracking-[0.25em] text-[#c89116] font-medium mb-3">
+          <p className="text-xs tracking-[0.25em] text-[#8A6500] font-medium mb-3">
             YOUR PRIVACY
           </p>
 
@@ -56,7 +56,7 @@ const PrivacyPolicy = () => {
 
           <p className="text-gray-600 leading-8 mb-5">
             At{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>
             , we respect your privacy and are committed to protecting the
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
         {/* 01 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">01</span>
+            <span className="text-[#8A6500] text-sm font-medium">01</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
         {/* 02 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">02</span>
+            <span className="text-[#8A6500] text-sm font-medium">02</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
         {/* 03 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">03</span>
+            <span className="text-[#8A6500] text-sm font-medium">03</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -134,7 +134,7 @@ const PrivacyPolicy = () => {
         {/* 04 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">04</span>
+            <span className="text-[#8A6500] text-sm font-medium">04</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm text-gray-600 leading-7">
                 <a
                   href="/"
-                  className="text-[#c89116] font-bold hover:underline"
+                  className="text-[#8A6500] font-bold hover:underline"
                 >
                   Noorza
                 </a>{" "}
@@ -160,7 +160,7 @@ const PrivacyPolicy = () => {
       {/* ================= PAYMENT & COOKIES ================= */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             SECURE SHOPPING
           </p>
 
@@ -175,7 +175,7 @@ const PrivacyPolicy = () => {
         </div>
 
         <div className="bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             QUESTIONS?
           </p>
 
@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
           <p className="text-sm text-gray-600 leading-7">
             If you have any questions about our Privacy Policy or how your
             information is handled, please contact the{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>{" "}
             support team.
@@ -198,7 +198,7 @@ const PrivacyPolicy = () => {
       <div className="mt-12 pt-6 border-t border-gray-200 text-center">
         <p className="text-xs text-gray-400 tracking-wide">
           Privacy Policy •
-          <a href="/" className="text-[#c89116] font-bold hover:underline">
+          <a href="/" className="text-[#8A6500] font-bold hover:underline">
             Noorza
           </a>{" "}
           • Last updated September 2026

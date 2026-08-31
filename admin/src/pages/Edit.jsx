@@ -161,7 +161,7 @@ const Edit = ({ token }) => {
             <div className="flex items-center gap-2 mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#c89116]" />
 
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#c89116] font-semibold">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#8A6500] font-semibold">
                 Noorza Admin
               </p>
             </div>
@@ -190,7 +190,7 @@ const Edit = ({ token }) => {
       <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.03)]">
         <div className="px-6 py-5 sm:px-8 border-b border-gray-100">
           <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#c89116] text-sm font-bold">
+            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#8A6500] text-sm font-bold">
               01
             </span>
 
@@ -267,7 +267,7 @@ const Edit = ({ token }) => {
       <div className="mt-5 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.03)]">
         <div className="px-6 py-5 sm:px-8 border-b border-gray-100">
           <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#c89116] text-sm font-bold">
+            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#8A6500] text-sm font-bold">
               02
             </span>
 
@@ -322,7 +322,7 @@ const Edit = ({ token }) => {
       <div className="mt-5 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.03)]">
         <div className="px-6 py-5 sm:px-8 border-b border-gray-100">
           <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#c89116] text-sm font-bold">
+            <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-[#faf8f3] text-[#8A6500] text-sm font-bold">
               03
             </span>
 
@@ -368,7 +368,7 @@ const Edit = ({ token }) => {
               </label>
 
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#c89116]">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-[#8A6500]">
                   PKR
                 </span>
 
@@ -408,13 +408,13 @@ const Edit = ({ token }) => {
                     className={`relative min-w-[58px] rounded-xl border px-5 py-3 text-sm font-semibold transition-all ${
                       selected
                         ? "border-[#c89116] bg-[#c89116] text-white shadow-lg shadow-[#c89116]/20 -translate-y-0.5"
-                        : "border-gray-200 bg-gray-50 text-gray-700 hover:-translate-y-0.5 hover:border-[#c89116] hover:bg-[#faf8f3] hover:text-[#c89116]"
+                        : "border-gray-200 bg-gray-50 text-gray-700 hover:-translate-y-0.5 hover:border-[#c89116] hover:bg-[#faf8f3] hover:text-[#8A6500]"
                     }`}
                   >
                     {size}
 
                     {selected && (
-                      <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-white text-[9px] font-bold text-[#c89116] shadow">
+                      <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-white text-[9px] font-bold text-[#8A6500] shadow">
                         ✓
                       </span>
                     )}

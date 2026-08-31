@@ -106,19 +106,19 @@ const Login = () => {
           <>
             <p
               onClick={() => setCurrentState("Sign Up")}
-              className="cursor-pointer hover:text-[#c89116] transition-colors"
+              className="cursor-pointer hover:text-[#8A6500] transition-colors"
             >
               Create Account
             </p>
 
-            <p className="cursor-pointer hover:text-[#c89116] transition-colors">
+            <p className="cursor-pointer hover:text-[#8A6500] transition-colors">
               Forgot Password?
             </p>
           </>
         ) : (
           <p
             onClick={() => setCurrentState("Login")}
-            className="cursor-pointer hover:text-[#c89116] transition-colors"
+            className="cursor-pointer hover:text-[#8A6500] transition-colors"
           >
             Login Here
           </p>

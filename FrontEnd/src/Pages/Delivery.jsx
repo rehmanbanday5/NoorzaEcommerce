@@ -22,7 +22,7 @@ const Delivery = () => {
         <div className="w-full sm:w-1/2 text-gray-600">
           <p className="mb-4 leading-7">
             At{" "}
-            <a href="/" className="text-[#c89116] transition duration-300">
+            <a href="/" className="text-[#8A6500] transition duration-300">
               Noorza
             </a>
             , we ensure fast and reliable delivery service across Pakistan. Our
@@ -43,8 +43,7 @@ const Delivery = () => {
           </p>
         </div>
       </div>
-      <div className="mt-20">
-      </div>
+      <div className="mt-20"></div>
     </div>
   );
 };

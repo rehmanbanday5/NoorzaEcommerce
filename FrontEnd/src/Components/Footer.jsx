@@ -59,31 +59,31 @@ const Footer = () => {
             </div>
 
             <ul className="flex flex-col gap-3 text-gray-300">
-              <Link to="/" className="hover:text-[#c89116] transition">
+              <Link to="/" className="hover:text-[#8A6500] transition">
                 Home
               </Link>
 
-              <Link to="/Delivery" className="hover:text-[#c89116] transition">
+              <Link to="/Delivery" className="hover:text-[#8A6500] transition">
                 Delivery
               </Link>
 
               <Link
                 to="/Privacy-Policy"
-                className="hover:text-[#c89116] transition"
+                className="hover:text-[#8A6500] transition"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/Refund-Policy"
-                className="hover:text-[#c89116] transition"
+                className="hover:text-[#8A6500] transition"
               >
                 Refund Policy
               </Link>
 
               <Link
                 to="/Payment-Policy"
-                className="hover:text-[#c89116] transition"
+                className="hover:text-[#8A6500] transition"
               >
                 Payment Policy
               </Link>
@@ -93,12 +93,12 @@ const Footer = () => {
           <div>
             <div className="mb-5">
               <p className="text-2xl font-medium">CONTACT</p>
-              <div className="w-12 h-[3px] bg-[#c89116] mt-2"></div>
+              <div className="w-12 h-[3px] bg-[#8A6500] mt-2"></div>
             </div>
 
             <div className="flex flex-col gap-4 text-gray-300">
               <div className="flex items-center gap-3">
-                <FaEnvelope className="text-[#c89116]" />
+                <FaEnvelope className="text-[#8A6500]" />
 
                 <a href="mailto:noorzaessentials@gmail.com">
                   noorzaessentials@gmail.com
@@ -113,7 +113,7 @@ const Footer = () => {
             Copyright © 2026{" "}
             <a
               href="/"
-              className="text-white hover:text-[#c89116] transition duration-300"
+              className="text-white hover:text-[#8A6500] transition duration-300"
             >
               Noorza
             </a>

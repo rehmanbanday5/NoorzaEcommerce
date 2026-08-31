@@ -8,7 +8,7 @@ const PaymentPolicy = () => {
       <div className="text-center py-8 mb-8">
         <div className="inline-flex gap-2 items-center mb-3 sm:gap-3 pr-4">
           <p className="text-[#1a1a1a] text-4xl sm:text-5xl">
-            PAYMENT <span className="text-[#c89116] font-medium">POLICY</span>
+            PAYMENT <span className="text-[#8A6500] font-medium">POLICY</span>
           </p>
 
           <p className="w-8 sm:w-12 h-[1px] sm:h-[2px] bg-[#1a1a1a]"></p>
@@ -20,7 +20,7 @@ const PaymentPolicy = () => {
         {/* IMAGE / PAYMENT METHODS */}
         <div className="w-full sm:w-1/2">
           <div className="border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-            <p className="text-xs tracking-[0.25em] text-[#c89116] font-medium mb-3">
+            <p className="text-xs tracking-[0.25em] text-[#8A6500] font-medium mb-3">
               SECURE PAYMENTS
             </p>
 
@@ -30,7 +30,7 @@ const PaymentPolicy = () => {
 
             <p className="text-sm text-gray-600 leading-7 mb-7">
               At{" "}
-              <a href="/" className="text-[#c89116] font-bold hover:underline">
+              <a href="/" className="text-[#8A6500] font-bold hover:underline">
                 Noorza
               </a>
               , we aim to make every order simple and convenient. For local
@@ -70,20 +70,20 @@ const PaymentPolicy = () => {
 
         {/* INTRO TEXT */}
         <div className="w-full sm:w-1/2 text-gray-600">
-          <p className="text-xs tracking-[0.25em] text-[#c89116] font-medium mb-3">
+          <p className="text-xs tracking-[0.25em] text-[#8A6500] font-medium mb-3">
             OUR PAYMENT PROCESS
           </p>
 
           <h2 className="text-2xl sm:text-3xl font-medium text-gray-900 mb-5">
             Payments made simple with{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza.
             </a>
           </h2>
 
           <p className="mb-5 leading-8">
             We provide convenient payment methods for customers shopping with{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>
             . Our payment process is designed to be straightforward, transparent
@@ -103,7 +103,7 @@ const PaymentPolicy = () => {
         {/* 01 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">01</span>
+            <span className="text-[#8A6500] text-sm font-medium">01</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -113,7 +113,7 @@ const PaymentPolicy = () => {
               <p className="text-sm text-gray-600 leading-7">
                 <a
                   href="/"
-                  className="text-[#c89116] font-bold hover:underline"
+                  className="text-[#8A6500] font-bold hover:underline"
                 >
                   Noorza
                 </a>{" "}
@@ -130,7 +130,7 @@ const PaymentPolicy = () => {
         {/* 02 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">02</span>
+            <span className="text-[#8A6500] text-sm font-medium">02</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -148,7 +148,7 @@ const PaymentPolicy = () => {
         {/* 03 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">03</span>
+            <span className="text-[#8A6500] text-sm font-medium">03</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -167,7 +167,7 @@ const PaymentPolicy = () => {
         {/* 04 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">04</span>
+            <span className="text-[#8A6500] text-sm font-medium">04</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -179,7 +179,7 @@ const PaymentPolicy = () => {
                 contact the{" "}
                 <a
                   href="/"
-                  className="text-[#c89116] font-bold hover:underline"
+                  className="text-[#8A6500] font-bold hover:underline"
                 >
                   Noorza
                 </a>{" "}
@@ -192,7 +192,7 @@ const PaymentPolicy = () => {
 
       {/* ================= IMPORTANT NOTE ================= */}
       <div className="mt-5 bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-        <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+        <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
           IMPORTANT
         </p>
 
@@ -210,7 +210,7 @@ const PaymentPolicy = () => {
       {/* ================= PAYMENT METHODS ================= */}
       <div className="mt-5">
         <div className="border border-gray-200 rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             PAYMENT OPTIONS
           </p>
 
@@ -222,7 +222,7 @@ const PaymentPolicy = () => {
             {/* CASH ON DELIVERY */}
             <div className="flex items-center gap-5 border border-gray-200 rounded-xl p-5 hover:border-[#c89116] transition-all duration-300">
               <div className="w-24 h-16 flex items-center justify-center">
-                <span className="text-2xl font-medium text-[#c89116]">COD</span>
+                <span className="text-2xl font-medium text-[#8A6500]">COD</span>
               </div>
 
               <div>
@@ -275,7 +275,7 @@ const PaymentPolicy = () => {
       {/* ================= CONTACT ================= */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="border border-gray-200 rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             NEED HELP?
           </p>
 
@@ -286,7 +286,7 @@ const PaymentPolicy = () => {
           <p className="text-sm text-gray-600 leading-7">
             If you have any questions regarding payment or your order, please
             contact the{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>{" "}
             support team for assistance.
@@ -294,7 +294,7 @@ const PaymentPolicy = () => {
         </div>
 
         <div className="bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             SIMPLE & SECURE
           </p>
 
@@ -305,7 +305,7 @@ const PaymentPolicy = () => {
           <p className="text-sm text-gray-600 leading-7">
             Our goal is to keep the payment experience simple, transparent and
             convenient for every{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>{" "}
             customer.
@@ -317,7 +317,7 @@ const PaymentPolicy = () => {
       <div className="mt-12 pt-6 border-t border-gray-200 text-center">
         <p className="text-xs text-gray-400 tracking-wide">
           Payment Policy •{" "}
-          <a href="/" className="text-[#c89116] font-bold hover:underline">
+          <a href="/" className="text-[#8A6500] font-bold hover:underline">
             Noorza
           </a>{" "}
           • Last updated September 2026

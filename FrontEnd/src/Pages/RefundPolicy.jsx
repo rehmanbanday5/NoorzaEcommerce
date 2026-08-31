@@ -9,7 +9,7 @@ const RefundPolicy = () => {
       <div className="text-center py-8 mb-8">
         <div className="inline-flex gap-2 items-center mb-3 sm:gap-3 pr-4">
           <p className="text-[#1a1a1a] text-4xl sm:text-5xl">
-            REFUND <span className="text-[#c89116] font-medium">POLICY</span>
+            REFUND <span className="text-[#8A6500] font-medium">POLICY</span>
           </p>
 
           <p className="w-8 sm:w-12 h-[1px] sm:h-[2px] bg-[#1a1a1a]"></p>
@@ -30,7 +30,7 @@ const RefundPolicy = () => {
 
         {/* INTRO TEXT */}
         <div className="w-full sm:w-1/2 text-gray-600">
-          <p className="text-xs tracking-[0.25em] text-[#c89116] font-medium mb-3">
+          <p className="text-xs tracking-[0.25em] text-[#8A6500] font-medium mb-3">
             OUR COMMITMENT
           </p>
 
@@ -41,7 +41,7 @@ const RefundPolicy = () => {
 
           <p className="mb-5 leading-8">
             At{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>
             , we want every order to be a positive shopping experience. If your
@@ -62,7 +62,7 @@ const RefundPolicy = () => {
         {/* 01 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">01</span>
+            <span className="text-[#8A6500] text-sm font-medium">01</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -81,7 +81,7 @@ const RefundPolicy = () => {
         {/* 02 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">02</span>
+            <span className="text-[#8A6500] text-sm font-medium">02</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -99,7 +99,7 @@ const RefundPolicy = () => {
         {/* 03 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">03</span>
+            <span className="text-[#8A6500] text-sm font-medium">03</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -121,7 +121,7 @@ const RefundPolicy = () => {
         {/* 04 */}
         <div className="group border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#c89116] transition-all duration-300">
           <div className="flex items-start gap-5">
-            <span className="text-[#c89116] text-sm font-medium">04</span>
+            <span className="text-[#8A6500] text-sm font-medium">04</span>
 
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">
@@ -139,7 +139,7 @@ const RefundPolicy = () => {
 
       {/* ================= IMPORTANT NOTE ================= */}
       <div className="mt-5 bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-        <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+        <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
           IMPORTANT
         </p>
 
@@ -157,7 +157,7 @@ const RefundPolicy = () => {
       {/* ================= CONTACT ================= */}
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="border border-gray-200 rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             NEED HELP?
           </p>
 
@@ -168,7 +168,7 @@ const RefundPolicy = () => {
           <p className="text-sm text-gray-600 leading-7">
             If you have any questions regarding a return or refund, please
             contact the{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>{" "}
             support team before sending your product back.
@@ -176,7 +176,7 @@ const RefundPolicy = () => {
         </div>
 
         <div className="bg-[#faf8f3] rounded-2xl p-6 sm:p-8">
-          <p className="text-xs tracking-[0.2em] text-[#c89116] mb-3">
+          <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-3">
             SIMPLE & TRANSPARENT
           </p>
 
@@ -187,7 +187,7 @@ const RefundPolicy = () => {
           <p className="text-sm text-gray-600 leading-7">
             Our goal is to make the refund process clear, straightforward and
             fair for every{" "}
-            <a href="/" className="text-[#c89116] font-bold hover:underline">
+            <a href="/" className="text-[#8A6500] font-bold hover:underline">
               Noorza
             </a>{" "}
             customer.
@@ -199,7 +199,7 @@ const RefundPolicy = () => {
       <div className="mt-12 pt-6 border-t border-gray-200 text-center">
         <p className="text-xs text-gray-400 tracking-wide">
           Refund Policy •{" "}
-          <a href="/" className="text-[#c89116] font-bold hover:underline">
+          <a href="/" className="text-[#8A6500] font-bold hover:underline">
             Noorza
           </a>{" "}
           • Last updated September 2026

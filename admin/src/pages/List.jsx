@@ -155,7 +155,7 @@ const List = ({ token }) => {
         {/* EMPTY */}
         {list.length === 0 && (
           <div className="py-20 text-center">
-            <div className="mx-auto h-14 w-14 rounded-2xl bg-[#faf8f3] flex items-center justify-center text-[#c89116] text-xl">
+            <div className="mx-auto h-14 w-14 rounded-2xl bg-[#faf8f3] flex items-center justify-center text-[#8A6500] text-xl">
               ▣
             </div>
 

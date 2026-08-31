@@ -105,7 +105,7 @@ const Cart = () => {
                         )
                       }
                       disabled={item.quantity <= 1}
-                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#c89116] disabled:text-gray-300 disabled:hover:bg-white transition-colors"
+                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#8A6500] disabled:text-gray-300 disabled:hover:bg-white transition-colors"
                       aria-label="Decrease quantity"
                     >
                       <Minus size={15} strokeWidth={2} />
@@ -122,7 +122,7 @@ const Cart = () => {
                       onClick={() =>
                         updateQuantity(item._id, item.size, item.quantity + 1)
                       }
-                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#c89116] transition-colors"
+                      className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:bg-[#faf8f3] hover:text-[#8A6500] transition-colors"
                       aria-label="Increase quantity"
                     >
                       <Plus size={15} strokeWidth={2} />

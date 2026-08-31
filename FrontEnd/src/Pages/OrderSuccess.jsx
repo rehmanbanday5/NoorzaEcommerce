@@ -159,7 +159,7 @@ const OrderSuccess = () => {
 
           <button
             onClick={() => navigate("/")}
-            className="block mx-auto mt-4 text-xs text-gray-400 hover:text-[#c89116] transition-colors"
+            className="block mx-auto mt-4 text-xs text-gray-400 hover:text-[#8A6500] transition-colors"
           >
             Continue Shopping
           </button>

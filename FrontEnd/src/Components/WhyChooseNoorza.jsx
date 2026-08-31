@@ -26,7 +26,7 @@ const WhyChooseNoorza = () => {
   return (
     <section className="py-16 sm:py-20">
       <div className="text-center mb-10 sm:mb-12">
-        <p className="text-xs sm:text-sm tracking-[0.25em] text-[#c89116] font-semibold mb-3">
+        <p className="text-xs sm:text-sm tracking-[0.25em] text-[#8A6500] font-semibold mb-3">
           THE NOORZA PROMISE
         </p>
 
@@ -53,7 +53,7 @@ const WhyChooseNoorza = () => {
                 <Icon
                   size={25}
                   strokeWidth={1.5}
-                  className="text-[#c89116] transition-colors duration-300 group-hover:text-white"
+                  className="text-[#8A6500] transition-colors duration-300 group-hover:text-white"
                 />
               </div>
 

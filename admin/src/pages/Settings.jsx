@@ -92,7 +92,7 @@ const Settings = ({ token }) => {
       >
         <div className="px-6 sm:px-8 py-6 border-b border-gray-100">
           <div className="flex items-center gap-4">
-            <div className="h-11 w-11 rounded-xl bg-[#faf8f3] flex items-center justify-center text-[#c89116] text-lg">
+            <div className="h-11 w-11 rounded-xl bg-[#faf8f3] flex items-center justify-center text-[#8A6500] text-lg">
               🔐
             </div>
 

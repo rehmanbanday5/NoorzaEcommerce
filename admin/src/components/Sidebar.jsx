@@ -61,7 +61,7 @@ const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
       {/* Mobile Close Button */}
       <div className="md:hidden flex items-center justify-between px-6 py-5 border-b border-gray-100">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+          <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
             Noorza Admin
           </p>
 
@@ -72,7 +72,7 @@ const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
 
         <button
           onClick={() => setSidebarOpen(false)}
-          className="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-[#faf8f3] hover:text-[#c89116] transition"
+          className="h-9 w-9 rounded-lg flex items-center justify-center text-gray-500 hover:bg-[#faf8f3] hover:text-[#8A6500] transition"
           aria-label="Close menu"
         >
           ✕
@@ -81,7 +81,7 @@ const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
 
       {/* Desktop Sidebar Header */}
       <div className="hidden md:block px-6 py-7 border-b border-gray-100">
-        <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#c89116]">
+        <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#8A6500]">
           Noorza Admin
         </p>
 
@@ -106,7 +106,7 @@ const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
                 `group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                   isActive
                     ? "bg-[#c89116] text-white shadow-lg shadow-[#c89116]/20"
-                    : "text-gray-600 hover:bg-[#faf8f3] hover:text-[#c89116]"
+                    : "text-gray-600 hover:bg-[#faf8f3] hover:text-[#8A6500]"
                 }`
               }
             >
@@ -116,7 +116,7 @@ const Sidebar = ({ setToken, sidebarOpen, setSidebarOpen }) => {
                     className={`flex h-9 w-9 items-center justify-center rounded-lg text-lg transition-all ${
                       isActive
                         ? "bg-white/15 text-white"
-                        : "bg-gray-50 text-gray-500 group-hover:text-[#c89116]"
+                        : "bg-gray-50 text-gray-500 group-hover:text-[#8A6500]"
                     }`}
                   >
                     {item.icon}

@@ -302,7 +302,7 @@ const Navbar = () => {
 
                     <button
                       onClick={() => navigate("/login")}
-                      className="w-full rounded-xl px-4 py-3 text-left text-sm font-semibold text-[#c89116] transition-all hover:bg-[#faf8f3]"
+                      className="w-full rounded-xl px-4 py-3 text-left text-sm font-semibold text-[#8A6500] transition-all hover:bg-[#faf8f3]"
                     >
                       Create Account
                     </button>
@@ -360,7 +360,7 @@ const Navbar = () => {
               to="/"
               className={`py-4 pl-6 border-b ${
                 isActive("/", "")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -373,7 +373,7 @@ const Navbar = () => {
               to="/collection?category=Bra"
               className={`py-4 pl-6 border-b ${
                 isActive("/collection", "?category=Bra")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -386,7 +386,7 @@ const Navbar = () => {
               to="/collection?category=Bra%20Sets"
               className={`py-4 pl-6 border-b ${
                 isActive("/collection", "?category=Bra%20Sets")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -399,7 +399,7 @@ const Navbar = () => {
               to="/collection?category=Lingerie"
               className={`py-4 pl-6 border-b ${
                 isActive("/collection", "?category=Lingerie")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -412,7 +412,7 @@ const Navbar = () => {
               to="/collection?category=Nightwear"
               className={`py-4 pl-6 border-b ${
                 isActive("/collection", "?category=Nightwear")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -425,7 +425,7 @@ const Navbar = () => {
               to="/about"
               className={`py-4 pl-6 border-b ${
                 isActive("/about", "")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -438,7 +438,7 @@ const Navbar = () => {
               to="/contact"
               className={`py-4 pl-6 border-b ${
                 isActive("/contact", "")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >
@@ -451,7 +451,7 @@ const Navbar = () => {
               to="/collection"
               className={`py-4 pl-6 border-b ${
                 isActive("/collection", "")
-                  ? "text-[#c89116] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
+                  ? "text-[#8A6500] bg-[#faf8f3] font-semibold border-l-4 border-l-[#c89116]"
                   : "text-gray-600"
               }`}
             >

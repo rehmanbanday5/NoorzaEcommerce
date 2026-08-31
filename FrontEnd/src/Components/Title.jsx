@@ -4,7 +4,7 @@ const Title = ({text1, text2}) => {
   return (
     <div className="inline-flex gap-2 items-center mb-3 sm:gap-3 pr-4">
       <p className="text-[#1a1a1a]">
-        {text1} <span className="text-[#c89116] font-medium">{text2}</span>
+        {text1} <span className="text-[#8A6500] font-medium">{text2}</span>
       </p>
       <p className="w-8 sm:w-12 h-[1px] sm:h-[2px] bg-[#1a1a1a]"></p>
     </div>

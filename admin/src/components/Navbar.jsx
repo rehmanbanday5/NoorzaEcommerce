@@ -37,7 +37,7 @@ const Navbar = ({ setSidebarOpen }) => {
         </div>
 
         <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-[#faf8f3] border border-[#ead9ad] flex items-center justify-center">
-          <span className="text-[#c89116] font-semibold">N</span>
+          <span className="text-[#8A6500] font-semibold">N</span>
         </div>
       </div>
     </div>

@@ -41,7 +41,7 @@ const ShopByCategory = () => {
   return (
     <section className="py-16 sm:py-20">
       <div className="text-center mb-10 sm:mb-12">
-        <p className="text-xs sm:text-sm tracking-[0.25em] text-[#c89116] font-semibold mb-3">
+        <p className="text-xs sm:text-sm tracking-[0.25em] text-[#8A6500] font-semibold mb-3">
           DISCOVER YOUR STYLE
         </p>
 
@@ -71,7 +71,7 @@ const ShopByCategory = () => {
               />
             </div>
 
-            <h3 className="mt-4 text-xs sm:text-sm font-semibold tracking-[0.12em] text-gray-700 group-hover:text-[#c89116] transition duration-300">
+            <h3 className="mt-4 text-xs sm:text-sm font-semibold tracking-[0.12em] text-gray-700 group-hover:text-[#8A6500] transition duration-300">
               {category.name}
             </h3>
           </button>
