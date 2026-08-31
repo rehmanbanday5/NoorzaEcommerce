@@ -1,0 +1,18 @@
+# Noorza
+
+Noorza is a Pakistani women's fashion and essentials store offering bras, bra sets, lingerie, and nightwear.
+
+## Main Pages
+
+- [Home](https://noorza-ecommerce-frontend.vercel.app/)
+- [Shop All](https://noorza-ecommerce-frontend.vercel.app/collection)
+- [Bra](https://noorza-ecommerce-frontend.vercel.app/collection?category=Bra)
+- [Bra Sets](https://noorza-ecommerce-frontend.vercel.app/collection?category=Bra%20Sets)
+- [Lingerie](https://noorza-ecommerce-frontend.vercel.app/collection?category=Lingerie)
+- [Nightwear](https://noorza-ecommerce-frontend.vercel.app/collection?category=Nightwear)
+- [About](https://noorza-ecommerce-frontend.vercel.app/about)
+- [Contact](https://noorza-ecommerce-frontend.vercel.app/contact)
+- [Delivery](https://noorza-ecommerce-frontend.vercel.app/delivery)
+- [Privacy Policy](https://noorza-ecommerce-frontend.vercel.app/privacy-policy)
+- [Refund Policy](https://noorza-ecommerce-frontend.vercel.app/refund-policy)
+- [Payment Policy](https://noorza-ecommerce-frontend.vercel.app/payment-policy)
