@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <div>
       {/* ---------------- Announcement Bar ---------------- */}
-      <div className="relative left-1/2 -ml-[50vw] w-screen bg-[#9A7000] overflow-hidden text-white">
+      <div className="relative left-1/2 -ml-[50vw] w-screen bg-[#6B4D00] overflow-hidden text-white">
         <div className="flex w-max animate-marquee whitespace-nowrap py-2 text-xs sm:text-sm font-medium">
           <div className="flex items-center shrink-0">
             <div className="flex items-center gap-3 mx-8">

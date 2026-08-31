@@ -199,7 +199,7 @@ const InstagramSection = () => {
             text-center
             py-10
             text-sm
-            text-gray-400
+            text-gray-700
           "
           >
             Follow Noorza on Instagram for more styles and inspiration.
