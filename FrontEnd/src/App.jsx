@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ScrollTop from "./Components/ScrollTop";
 import SearchBar from "./Components/SearchBar";
+import Home from "./Pages/Home";
 import "react-toastify/dist/ReactToastify.css";
 
 const ToastContainer = lazy(() =>
@@ -12,7 +13,6 @@ const ToastContainer = lazy(() =>
   })),
 );
 
-const Home = lazy(() => import("./Pages/Home"));
 const Collection = lazy(() => import("./Pages/Collection"));
 const About = lazy(() => import("./Pages/About"));
 const Contact = lazy(() => import("./Pages/Contact"));
