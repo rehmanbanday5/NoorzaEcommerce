@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "../utils/notifications";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
 
@@ -17,7 +17,6 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState("");
-  const location = useLocation();
   const navigate = useNavigate();
 
   const addToCart = async (itemId, size) => {
@@ -138,28 +137,8 @@ const ShopContextProvider = (props) => {
   };
 
   useEffect(() => {
-    if (
-      !window.matchMedia("(max-width: 767px)").matches ||
-      location.pathname !== "/"
-    ) {
-      getProductsData();
-      return;
-    }
-
-    const loadProductsAfterScroll = () => {
-      getProductsData();
-      window.removeEventListener("scroll", loadProductsAfterScroll);
-    };
-
-    window.addEventListener("scroll", loadProductsAfterScroll, {
-      once: true,
-      passive: true,
-    });
-
-    return () => {
-      window.removeEventListener("scroll", loadProductsAfterScroll);
-    };
-  }, [location.pathname]);
+    getProductsData();
+  }, []);
 
   useEffect(() => {
     if (!token && localStorage.getItem("token")) {
