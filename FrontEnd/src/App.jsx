@@ -1,11 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ScrollTop from "./Components/ScrollTop";
 import SearchBar from "./Components/SearchBar";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+const ToastContainer = lazy(() =>
+  import("react-toastify").then(({ ToastContainer: Container }) => ({
+    default: Container,
+  })),
+);
 
 const Home = lazy(() => import("./Pages/Home"));
 const Collection = lazy(() => import("./Pages/Collection"));
@@ -24,18 +29,29 @@ const OrderSuccess = lazy(() => import("./Pages/OrderSuccess"));
 const OrderTracking = lazy(() => import("./Pages/OrderTracking"));
 
 const App = () => {
+  const [loadToastContainer, setLoadToastContainer] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => setLoadToastContainer(true), 0);
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
   return (
     <>
       <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
-        <ToastContainer
-          position="bottom-right"
-          autoClose={2500}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          pauseOnHover
-          draggable
-        />
+        {loadToastContainer && (
+          <Suspense fallback={null}>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={2500}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              pauseOnHover
+              draggable
+            />
+          </Suspense>
+        )}
 
         <Navbar />
 

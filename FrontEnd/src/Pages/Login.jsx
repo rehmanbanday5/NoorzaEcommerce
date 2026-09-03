@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../Context/ShopContext";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "../utils/notifications";
 import { useSearchParams } from "react-router-dom";
 
 const Login = () => {
