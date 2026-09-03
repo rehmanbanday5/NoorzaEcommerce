@@ -125,111 +125,134 @@ const Navbar = () => {
         {/* ================= DESKTOP NAVBAR ================= */}
         <ul className="hidden sm:flex gap-10 text-sm">
           {/* HOME */}
-          <NavLink to="/" className={navClass(isActive("/", ""))}>
-            <p>HOME</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/", "") ? "block" : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink to="/" className={navClass(isActive("/", ""))}>
+              <p>HOME</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/", "") ? "block" : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* BRA */}
-          <NavLink
-            to="/collection?category=Bra"
-            className={navClass(isActive("/collection", "?category=Bra"))}
-          >
-            <p>BRA</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "?category=Bra") ? "block" : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink
+              to="/collection?category=Bra"
+              className={navClass(isActive("/collection", "?category=Bra"))}
+            >
+              <p>BRA</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/collection", "?category=Bra") ? "block" : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* BRA SETS */}
-          <NavLink
-            to="/collection?category=Bra%20Sets"
-            className={navClass(
-              isActive("/collection", "?category=Bra%20Sets"),
-            )}
-          >
-            <p>BRA SETS</p>
+          <li>
+            <NavLink
+              to="/collection?category=Bra%20Sets"
+              className={navClass(
+                isActive("/collection", "?category=Bra%20Sets"),
+              )}
+            >
+              <p>BRA SETS</p>
 
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "?category=Bra%20Sets")
-                  ? "block"
-                  : "hidden"
-              }`}
-            />
-          </NavLink>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/collection", "?category=Bra%20Sets")
+                    ? "block"
+                    : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* LINGERIE */}
-          <NavLink
-            to="/collection?category=Lingerie"
-            className={navClass(isActive("/collection", "?category=Lingerie"))}
-          >
-            <p>LINGERIE</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "?category=Lingerie")
-                  ? "block"
-                  : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink
+              to="/collection?category=Lingerie"
+              className={navClass(
+                isActive("/collection", "?category=Lingerie"),
+              )}
+            >
+              <p>LINGERIE</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/collection", "?category=Lingerie")
+                    ? "block"
+                    : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* NIGHTWEAR */}
-          <NavLink
-            to="/collection?category=Nightwear"
-            className={navClass(isActive("/collection", "?category=Nightwear"))}
-          >
-            <p>NIGHTWEAR</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "?category=Nightwear")
-                  ? "block"
-                  : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink
+              to="/collection?category=Nightwear"
+              className={navClass(
+                isActive("/collection", "?category=Nightwear"),
+              )}
+            >
+              <p>NIGHTWEAR</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/collection", "?category=Nightwear")
+                    ? "block"
+                    : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* ABOUT */}
-          <NavLink to="/about" className={navClass(isActive("/about", ""))}>
-            <p>ABOUT</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/about", "") ? "block" : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink to="/about" className={navClass(isActive("/about", ""))}>
+              <p>ABOUT</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/about", "") ? "block" : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* CONTACT */}
-          <NavLink to="/contact" className={navClass(isActive("/contact", ""))}>
-            <p>CONTACT</p>
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/contact", "") ? "block" : "hidden"
-              }`}
-            />
-          </NavLink>
+          <li>
+            <NavLink
+              to="/contact"
+              className={navClass(isActive("/contact", ""))}
+            >
+              <p>CONTACT</p>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/contact", "") ? "block" : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
 
           {/* ALL COLLECTION */}
-          <NavLink
-            to="/collection"
-            className={navClass(isActive("/collection", ""))}
-          >
-            <p>
-              SHOP<span className="ml-2">ALL</span>
-            </p>
+          <li>
+            <NavLink
+              to="/collection"
+              className={navClass(isActive("/collection", ""))}
+            >
+              <p>
+                SHOP<span className="ml-2">ALL</span>
+              </p>
 
-            <hr
-              className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
-                isActive("/collection", "") ? "block" : "hidden"
-              }`}
-            />
-          </NavLink>
+              <hr
+                className={`w-2/4 border-none h-[1.5px] bg-gray-700 ${
+                  isActive("/collection", "") ? "block" : "hidden"
+                }`}
+              />
+            </NavLink>
+          </li>
         </ul>
 
         {/* ================= RIGHT ICONS ================= */}
