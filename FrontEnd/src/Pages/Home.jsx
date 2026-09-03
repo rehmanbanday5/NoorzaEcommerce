@@ -18,7 +18,11 @@ const Home = () => {
 
       <ShopByCategory />
 
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <div className="min-h-[3600px] sm:min-h-[2800px] md:min-h-0" />
+        }
+      >
         <LatestCollection />
         <WhyChooseNoorza />
         <BestSeller />
