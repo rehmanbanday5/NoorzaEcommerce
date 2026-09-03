@@ -137,7 +137,13 @@ const ShopContextProvider = (props) => {
   };
 
   useEffect(() => {
-    getProductsData();
+    if (!window.matchMedia("(max-width: 767px)").matches) {
+      getProductsData();
+      return;
+    }
+
+    const timeoutId = window.setTimeout(getProductsData, 2000);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {
