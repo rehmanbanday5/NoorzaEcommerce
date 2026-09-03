@@ -12,7 +12,7 @@ const LatestCollection = () => {
   const scrollNext = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({
-        left: sliderRef.current.clientWidth / 4 + 20,
+        left: window.innerWidth / 4 + 20,
         behavior: "smooth",
       });
     }
@@ -21,7 +21,7 @@ const LatestCollection = () => {
   const scrollPrevious = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({
-        left: -(sliderRef.current.clientWidth / 4 + 20),
+        left: -(window.innerWidth / 4 + 20),
         behavior: "smooth",
       });
     }
