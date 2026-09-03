@@ -18,14 +18,14 @@ const Home = () => {
 
       <ShopByCategory />
 
-      <Suspense fallback={null}>
-        <div className="min-h-[3600px] sm:min-h-[2800px] md:min-h-0">
+      <div className="min-h-[3600px] sm:min-h-[2800px] md:min-h-0">
+        <Suspense fallback={null}>
           <LatestCollection />
           <WhyChooseNoorza />
           <BestSeller />
           <InstagramSection />
-        </div>
-      </Suspense>
+        </Suspense>
+      </div>
     </div>
   );
 };
