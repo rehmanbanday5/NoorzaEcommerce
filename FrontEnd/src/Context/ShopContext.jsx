@@ -142,8 +142,21 @@ const ShopContextProvider = (props) => {
       return;
     }
 
-    const timeoutId = window.setTimeout(getProductsData, 2000);
-    return () => window.clearTimeout(timeoutId);
+    let timeoutId;
+    const scheduleProductLoad = () => {
+      timeoutId = window.setTimeout(getProductsData, 1000);
+    };
+
+    if (document.readyState === "complete") {
+      scheduleProductLoad();
+    } else {
+      window.addEventListener("load", scheduleProductLoad, { once: true });
+    }
+
+    return () => {
+      window.removeEventListener("load", scheduleProductLoad);
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {
