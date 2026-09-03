@@ -1,11 +1,12 @@
 import { createContext } from "react";
-import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "../utils/notifications";
 import { useNavigate } from "react-router-dom";
 
 export const ShopContext = createContext();
+
+const getAxios = () => import("axios").then(({ default: axios }) => axios);
 
 const ShopContextProvider = (props) => {
   const currency = "Rs";
@@ -40,6 +41,7 @@ const ShopContextProvider = (props) => {
 
     if (token) {
       try {
+        const axios = await getAxios();
         await axios.post(
           backendUrl + "/api/cart/add",
           { itemId, size },
@@ -74,6 +76,7 @@ const ShopContextProvider = (props) => {
 
     if (token) {
       try {
+        const axios = await getAxios();
         await axios.post(
           backendUrl + "/api/cart/update",
           { itemId, size, quantity },
@@ -103,6 +106,7 @@ const ShopContextProvider = (props) => {
 
   const getProductsData = async () => {
     try {
+      const axios = await getAxios();
       const response = await axios.get(backendUrl + "/api/product/list");
       if (response.data.success) {
         setProducts(response.data.products);
@@ -117,6 +121,7 @@ const ShopContextProvider = (props) => {
 
   const getUserCart = async (token) => {
     try {
+      const axios = await getAxios();
       const response = await axios.post(
         backendUrl + "/api/cart/get",
         {},
