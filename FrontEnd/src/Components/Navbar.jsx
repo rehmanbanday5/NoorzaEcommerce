@@ -33,7 +33,7 @@ const Navbar = () => {
 
   const navClass = (active) =>
     `flex flex-col items-center gap-1 transition ease-in-out ${
-      active ? "text-[#c89116]" : "text-gray-700 hover:text-[#c89116]"
+      active ? "sm:text-[#6B4D00]" : "text-gray-700 hover:text-[#c89116]"
     }`;
 
   return (
@@ -465,4 +465,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
