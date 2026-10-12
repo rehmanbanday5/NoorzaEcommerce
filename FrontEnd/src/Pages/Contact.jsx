@@ -59,7 +59,7 @@ const Contact = () => {
                   </p>
 
                   <p className="mt-1 text-sm font-medium text-gray-800">
-                    (+92) 337 1234567
+                    (+92) 308 888 2658
                   </p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                   </p>
 
                   <p className="mt-1 text-sm font-medium text-gray-800">
-                    Noorza@gmail.com
+                    noorzaessentials@gmail.com
                   </p>
                 </div>
               </div>

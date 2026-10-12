@@ -3,6 +3,7 @@ import {
   FaWhatsapp,
   FaTiktok,
   FaEnvelope,
+  FaFacebookF,
 } from "react-icons/fa6";
 
 const Footer = () => {
@@ -32,7 +33,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://web.whatsapp.com/send?phone=923334913423"
+                href="https://web.whatsapp.com/send?phone=923088882658"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact Noorza on WhatsApp"
@@ -50,6 +51,17 @@ const Footer = () => {
               >
                 {" "}
                 <FaTiktok />{" "}
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@noorzaessentials"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Noorza on TikTok"
+                className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
+              >
+                {" "}
+                <FaFacebookF />{" "}
               </a>
             </div>
           </div>
