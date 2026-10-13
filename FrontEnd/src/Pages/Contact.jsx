@@ -59,7 +59,7 @@ const Contact = () => {
                   </p>
 
                   <p className="mt-1 text-sm font-medium text-gray-800">
-                    (+92) 308 888 2658
+                    (+92) 337 3187771
                   </p>
                 </div>
               </div>

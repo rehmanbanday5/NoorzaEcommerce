@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://web.whatsapp.com/send?phone=923088882658"
+                href="https://web.whatsapp.com/send?phone=+923373187771"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact Noorza on WhatsApp"
@@ -54,10 +54,10 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.tiktok.com/@noorzaessentials"
+                href="https://www.facebook.com/share/1CKYsMGd3i/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow Noorza on TikTok"
+                aria-label="Follow Noorza on Facebook"
                 className="w-[45px] h-[45px] rounded-full border border-gray-300 flex items-center justify-center text-white text-lg transition-all duration-300 hover:bg-[#c89116] hover:border-[#c89116] hover:text-white hover:-translate-y-1"
               >
                 {" "}
@@ -73,47 +73,44 @@ const Footer = () => {
             </div>
 
             <ul className="flex flex-col gap-3 text-gray-300">
-                <li>
-                  <a href="/" className="hover:text-[#8A6500] transition">
-                    Home
-                  </a>
-                </li>
+              <li>
+                <a href="/" className="hover:text-[#8A6500] transition">
+                  Home
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    href="/Delivery"
-                    className="hover:text-[#8A6500] transition"
-                  >
-                    Delivery
-                  </a>
-                </li>
+              <li>
+                <a href="/Delivery" className="hover:text-[#8A6500] transition">
+                  Delivery
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    href="/Privacy-Policy"
-                    className="hover:text-[#8A6500] transition"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
+              <li>
+                <a
+                  href="/Privacy-Policy"
+                  className="hover:text-[#8A6500] transition"
+                >
+                  Privacy Policy
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    href="/Refund-Policy"
-                    className="hover:text-[#8A6500] transition"
-                  >
-                    Refund Policy
-                  </a>
-                </li>
+              <li>
+                <a
+                  href="/Refund-Policy"
+                  className="hover:text-[#8A6500] transition"
+                >
+                  Refund Policy
+                </a>
+              </li>
 
-                <li>
-                  <a
-                    href="/Payment-Policy"
-                    className="hover:text-[#8A6500] transition"
-                  >
-                    Payment Policy
-                  </a>
-                </li>
+              <li>
+                <a
+                  href="/Payment-Policy"
+                  className="hover:text-[#8A6500] transition"
+                >
+                  Payment Policy
+                </a>
+              </li>
             </ul>
           </div>
 
