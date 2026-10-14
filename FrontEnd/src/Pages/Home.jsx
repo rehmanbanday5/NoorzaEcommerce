@@ -11,6 +11,10 @@ const BestSeller = lazy(() => import("../Components/BestSeller"));
 
 const InstagramSection = lazy(() => import("../Components/InstagramSection"));
 
+const ReviewSection = lazy(() => import("../Components/ReviewSection"));
+
+
+
 const Home = () => {
   return (
     <div>
@@ -26,6 +30,7 @@ const Home = () => {
         <LatestCollection />
         <WhyChooseNoorza />
         <BestSeller />
+        <ReviewSection />
         <InstagramSection />
       </Suspense>
     </div>
