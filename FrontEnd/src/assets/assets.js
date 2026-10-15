@@ -1,6 +1,5 @@
-// import Noorza from "./Noorza.png"
 import Noorza from "./Noorza.webp"
-import Noor from "./Noor.jpeg"
+import Noor from "./Noor.webp"
 import Banner1 from "./Banner1.webp";
 import Banner2 from "./Banner2.webp";
 import Banner3 from "./Banner3.webp";
@@ -9,23 +8,23 @@ import BraCategory from "./BraCategory.webp";
 import BraSets from "./BraSets.webp";
 import LingerieCategory from "./LingerieCategory.webp";
 import NightWear from "./NightWear.webp";
-import easypaisa from "./easypaisa.png";
-import jazzcash from "./jazzcash.png";
-import Delivery from './Delivery.png'
-import Privacy from './Privacy.png'
-import Refund from './Refund.png'
-import cart_icon from './cart_icon.png'
-import bin_icon from './bin_icon.png'
-import dropdown_icon from './dropdown_icon.png'
-import exchange_icon from './exchange_icon.png'
-import quality_icon from './quality_icon.png'
-import star_dull_icon from './star_dull_icon.png'
-import star_icon from './star_icon.png'
-import support_img from './support_img.png'
-import menu_icon from './menu_icon.png'
-import about_img from './about_img.png'
-import contact_img from './contact_img.png'
-import cross_icon from './cross_icon.png'
+import easypaisa from "./easypaisa.webp";
+import jazzcash from "./jazzcash.webp";
+import Delivery from './Delivery.webp'
+import Privacy from './Privacy.webp'
+import Refund from './Refund.webp'
+import cart_icon from './cart_icon.svg'
+import bin_icon from './bin_icon.svg'
+import dropdown_icon from './dropdown_icon.svg'
+import exchange_icon from './exchange_icon.svg'
+import quality_icon from './quality_icon.svg'
+import star_dull_icon from './star_dull_icon.svg'
+import star_icon from './star_icon.svg'
+import support_img from './Support.webp'
+import menu_icon from './menu_icon.svg'
+import about_img from './about.webp'
+import contact_img from './contact.webp'
+import cross_icon from './cross_icon.svg'
 
 export const assets = {
   Noorza,

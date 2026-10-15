@@ -33,7 +33,7 @@ const About = () => {
             <img
               src={assets.about_img}
               alt="Noorza"
-              className="relative w-full h-[380px] sm:h-[460px] object-cover rounded-2xl"
+              className="relative w-full h-[440px] sm:h-[520px] object-contain rounded-2xl"
             />
 
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-[#c89116]/40" />

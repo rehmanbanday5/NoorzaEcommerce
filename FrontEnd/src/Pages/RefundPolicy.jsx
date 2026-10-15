@@ -21,7 +21,7 @@ const RefundPolicy = () => {
             <img
               src={assets.Refund}
               alt="Refund Policy"
-              className="w-full h-auto sm:h-[24rem] object-contain sm:object-cover sm:object-center object-right"
+              className="w-full h-auto object-contain object-center"
             />
           </div>
         </div>

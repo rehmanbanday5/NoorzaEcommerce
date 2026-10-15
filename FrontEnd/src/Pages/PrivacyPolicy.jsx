@@ -22,22 +22,11 @@ const PrivacyPolicy = () => {
             <img
               src={assets.Privacy}
               alt="Noorza Privacy Policy"
-              className="w-full h-auto sm:h-[32rem] object-contain sm:object-cover sm:object-center object-left"
+              className="w-full h-auto object-contain object-center"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-black/75 backdrop-blur-sm rounded-xl px-5 py-4 text-white">
-                <p className="text-xs tracking-[0.2em] text-[#8A6500] mb-1">
-                  NOORZA
-                </p>
-
-                <p className="text-lg font-medium">
-                  Your privacy. Our responsibility.
-                </p>
-              </div>
-            </div>
+            <div className="absolute bottom-6 left-6 right-6"></div>
           </div>
         </div>
 
