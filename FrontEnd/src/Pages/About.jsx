@@ -31,7 +31,7 @@ const About = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-[#c89116]/40" />
 
             <img
-              src={assets.about_img}
+              src={assets.about}
               alt="Noorza"
               className="relative w-full h-[440px] sm:h-[520px] object-contain rounded-2xl"
             />

@@ -23,7 +23,7 @@ const Contact = () => {
 
             <img
               className="relative w-full h-full min-h-[350px] md:min-h-[450px] object-cover rounded-2xl"
-              src={assets.contact_img}
+              src={assets.Contact}
               alt="Contact Noorza"
             />
 
