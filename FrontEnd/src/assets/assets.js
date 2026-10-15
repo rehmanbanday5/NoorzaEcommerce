@@ -20,10 +20,10 @@ import exchange_icon from './exchange_icon.svg'
 import quality_icon from './quality_icon.svg'
 import star_dull_icon from './star_dull_icon.svg'
 import star_icon from './star_icon.svg'
-import support_img from './Support.webp'
+import Support from './Support.webp'
 import menu_icon from './menu_icon.svg'
-import about_img from './about.webp'
-import contact_img from './contact.webp'
+import about from './about.webp'
+import Contact from './Contact.webp'
 import cross_icon from './cross_icon.svg'
 
 export const assets = {
@@ -49,10 +49,10 @@ export const assets = {
   star_dull_icon,
   star_icon,
   bin_icon,
-  support_img,
+  Support,
   menu_icon,
-  about_img,
-  contact_img,
+  about,
+  Contact,
   cross_icon,
 };
 
