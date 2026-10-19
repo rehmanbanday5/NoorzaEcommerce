@@ -10,6 +10,7 @@ import {
   RotateCcw,
   Minus,
   Plus,
+  Heart,
 } from "lucide-react";
 import { toast } from "react-toastify";
 
@@ -161,20 +162,22 @@ const Product = () => {
               <p className="text-sm font-semibold text-gray-900">Select Size</p>
 
               <div className="flex flex-wrap gap-2 mt-4">
-                {productData.sizes.map((item, index) => (
-                  <button
-                    type="button"
-                    key={index}
-                    onClick={() => setSize(item)}
-                    className={`min-w-[52px] px-4 py-2.5 rounded-lg border text-sm font-medium transition-all ${
-                      item === size
-                        ? "border-[#c89116] bg-[#c89116] text-white"
-                        : "border-gray-200 bg-white text-gray-700 hover:border-[#c89116] hover:text-[#c89116]"
-                    }`}
-                  >
-                    {item}
-                  </button>
-                ))}
+                {['Small (36-38")', 'Medium (38-40")', 'Large (40-42")'].map(
+                  (item) => (
+                    <button
+                      type="button"
+                      key={item}
+                      onClick={() => setSize(item)}
+                      className={`px-3 sm:px-4 py-2.5 rounded-lg border text-xs sm:text-sm font-medium transition-all ${
+                        item === size
+                          ? "border-[#c89116] bg-[#c89116] text-white"
+                          : "border-gray-200 bg-white text-gray-700 hover:border-[#c89116] hover:text-[#c89116]"
+                      }`}
+                    >
+                      {item}
+                    </button>
+                  ),
+                )}
               </div>
             </div>
 
@@ -260,14 +263,14 @@ const Product = () => {
               </div>
 
               <div className="rounded-xl bg-[#faf8f3] border border-[#ead9ad]/50 p-4">
-                <Truck size={19} className="text-[#c89116]" />
+                <Heart size={19} className="text-[#c89116]" />
 
                 <p className="mt-3 text-xs font-semibold text-gray-800">
-                  Cash On Delivery
+                  Premium Comfort
                 </p>
 
                 <p className="mt-1 text-[10px] leading-4 text-gray-400">
-                  Pay when you receive
+                  Made for Everyday Confidence
                 </p>
               </div>
 
@@ -287,13 +290,36 @@ const Product = () => {
             {/* DESCRIPTION */}
 
             <div className="mt-8 pt-7 pb-8 border-t border-gray-100">
-              <p className="text-xs uppercase tracking-[0.2em] font-semibold text-gray-900">
+              <p className="text-md uppercase tracking-[0.2em] font-bold text-black">
                 Product Description
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-gray-500">
-                {productData.description}
-              </p>
+              <div className="mt-4 text-sm leading-7 text-black whitespace-pre-line">
+                {productData.description.split("\n").map((line, index) => {
+                  const trimmedLine = line.trim();
+
+                  const isHeading =
+                    trimmedLine.includes("𝐊𝐞𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬:") ||
+                    trimmedLine.includes("𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐒𝐩𝐞𝐜𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬:");
+
+                  return (
+                    <div
+                      key={index}
+                      className={
+                        isHeading
+                          ? "text-base font-bold mt-5 mb-2"
+                          : trimmedLine.startsWith("- ")
+                            ? "mb-3"
+                            : "font-normal"
+                      }
+                    >
+                      {trimmedLine.startsWith("- ")
+                        ? `• ${trimmedLine.slice(2)}`
+                        : line}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

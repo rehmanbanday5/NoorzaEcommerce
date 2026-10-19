@@ -92,7 +92,9 @@ const Add = ({ token }) => {
 
   const categories = ["Bra", "Bra Sets", "Lingerie", "Nightwear", "Shop All"];
 
-  const availableSizes = ["S", "M", "L", "XL", "XXL"];
+
+const availableSizes = ['Small (36-38")', 'Medium (38-40")', 'Large (40-42")'];
+
 
   return (
     <form onSubmit={onSubmitHandler} className="w-full max-w-6xl mx-auto pb-12">

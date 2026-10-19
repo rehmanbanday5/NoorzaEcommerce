@@ -1,6 +1,29 @@
 import { v2 as cloudinary } from "cloudinary";
 import productModel from "../models/productModel.js";
 
+
+const ALLOWED_SIZES = ['Small (36-38")', 'Medium (38-40")', 'Large (40-42")'];
+
+const validateSizes = (sizesString) => {
+  try {
+    const sizes = JSON.parse(sizesString);
+
+    if (
+      !Array.isArray(sizes) ||
+      sizes.length === 0 ||
+      sizes.some((size) => !ALLOWED_SIZES.includes(size)) ||
+      new Set(sizes).size !== sizes.length
+    ) {
+      return null;
+    }
+
+    return sizes;
+  } catch {
+    return null;
+  }
+};
+
+
 // ================= ADD PRODUCT =================
 
 const addProduct = async (req, res) => {
@@ -13,6 +36,15 @@ const addProduct = async (req, res) => {
       sizes,
       bestseller,
     } = req.body;
+
+    const validatedSizes = validateSizes(sizes);
+
+    if (!validatedSizes) {
+      return res.status(400).json({
+        success: false,
+        message: "Please select valid product sizes.",
+      });
+    }
 
     const image1 = req.files.image1 && req.files.image1[0];
     const image2 = req.files.image2 && req.files.image2[0];
@@ -40,7 +72,7 @@ const addProduct = async (req, res) => {
       category,
       price: Number(price),
       bestseller: bestseller === "true" ? true : false,
-      sizes: JSON.parse(sizes),
+      sizes: validatedSizes,
       image: imagesUrl,
       date: Date.now(),
     };
@@ -147,6 +179,15 @@ const updateProduct = async (req, res) => {
       existingImages,
     } = req.body;
 
+    const validatedSizes = validateSizes(sizes);
+
+    if (!validatedSizes) {
+      return res.status(400).json({
+        success: false,
+        message: "Please select valid product sizes.",
+      });
+    }
+
     if (!id) {
       return res.json({
         success: false,
@@ -205,7 +246,7 @@ const updateProduct = async (req, res) => {
       description,
       price: Number(price),
       category,
-      sizes: JSON.parse(sizes),
+      sizes: validatedSizes,
       bestseller: bestseller === "true",
       image: finalImages,
     };
