@@ -14,11 +14,15 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Noorza on WhatsApp"
-      title="Chat with us on WhatsApp"
-      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40"
+      aria-label="Get help on WhatsApp"
+      title="Chat with Noorza"
+      className="fixed right-0 top-1/2 z-50 flex -translate-y-1/2 flex-col items-center gap-2 rounded-l-lg border border-r-0 border-white/20 bg-[#176B45] px-2.5 py-3 text-white shadow-md transition-colors duration-300 hover:bg-[#25D366] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
     >
-      <FaWhatsapp size={32} aria-hidden="true" />
+      <FaWhatsapp size={21} aria-hidden="true" className="rotate-180" />
+
+      <span className="font-['Manrope'] text-[11px] font-semibold tracking-wide [writing-mode:vertical-rl] rotate-180">
+        Help
+      </span>
     </a>
   );
 };
