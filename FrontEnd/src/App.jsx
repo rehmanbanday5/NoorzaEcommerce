@@ -6,6 +6,7 @@ import ScrollTop from "./Components/ScrollTop";
 import SearchBar from "./Components/SearchBar";
 import Home from "./Pages/Home";
 import "react-toastify/dist/ReactToastify.css";
+import WhatsAppButton from "./Components/WhatsappButton";
 
 const ToastContainer = lazy(() =>
   import("react-toastify").then(({ ToastContainer: Container }) => ({
@@ -82,8 +83,11 @@ const App = () => {
       </div>
 
       <Footer />
+
+      <WhatsAppButton />
     </>
   );
 };
 
 export default App;
+
