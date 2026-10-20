@@ -96,9 +96,6 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
-                  <MapPin size={19} className="text-[#c89116]" />
-                </div>
 
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-gray-400">
@@ -110,7 +107,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              ```
+              
               {/* SUPPORT */}
               <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
                 <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
