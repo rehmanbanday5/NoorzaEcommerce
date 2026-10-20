@@ -7,7 +7,7 @@ import SearchBar from "./Components/SearchBar";
 import Home from "./Pages/Home";
 import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "./Components/WhatsappButton";
-import TermsAndConditions from "./TermsAndConditions";
+import TermsandConditions from "./TermsandConditions";
 
 const ToastContainer = lazy(() =>
   import("react-toastify").then(({ ToastContainer: Container }) => ({
