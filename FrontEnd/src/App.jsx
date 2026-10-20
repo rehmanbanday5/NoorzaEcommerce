@@ -7,7 +7,7 @@ import SearchBar from "./Components/SearchBar";
 import Home from "./Pages/Home";
 import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "./Components/WhatsappButton";
-import TermsandConditions from "./TermsandConditions ";
+
 
 const ToastContainer = lazy(() =>
   import("react-toastify").then(({ ToastContainer: Container }) => ({
@@ -27,6 +27,7 @@ const Delivery = lazy(() => import("./Pages/Delivery"));
 const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy"));
 const RefundPolicy = lazy(() => import("./Pages/RefundPolicy"));
 const PaymentPolicy = lazy(() => import("./Pages/PaymentPolicy"));
+const TermsandConditions = lazy(() => import("./Pages/TermsandConditions"));
 const OrderSuccess = lazy(() => import("./Pages/OrderSuccess"));
 const OrderTracking = lazy(() => import("./Pages/OrderTracking"));
 
