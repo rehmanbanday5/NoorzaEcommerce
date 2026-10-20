@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TermsAndConditions() {
+export default function TermsandConditions() {
   return (
     <div
       style={{

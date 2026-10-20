@@ -78,7 +78,7 @@ const App = () => {
               <Route path="/payment-policy" element={<PaymentPolicy />} />
               <Route
                 path="/terms-and-conditions"
-                element={<TermsAndConditions />}
+                element={<TermsandConditions />}
               />
               <Route path="/order-success" element={<OrderSuccess />} />
               <Route path="/track-order/:orderId" element={<OrderTracking />} />
