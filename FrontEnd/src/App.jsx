@@ -7,6 +7,7 @@ import SearchBar from "./Components/SearchBar";
 import Home from "./Pages/Home";
 import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "./Components/WhatsappButton";
+import TermsAndConditions from "./TermsAndConditions";
 
 const ToastContainer = lazy(() =>
   import("react-toastify").then(({ ToastContainer: Container }) => ({
@@ -75,6 +76,10 @@ const App = () => {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/payment-policy" element={<PaymentPolicy />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsAndConditions />}
+              />
               <Route path="/order-success" element={<OrderSuccess />} />
               <Route path="/track-order/:orderId" element={<OrderTracking />} />
             </Routes>
