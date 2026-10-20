@@ -63,7 +63,6 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-
               {/* EMAIL */}
               <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
                 <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
@@ -80,7 +79,38 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
+              ```jsx
+              <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
+                  <Mail size={19} className="text-[#c89116]" />
+                </div>
 
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-gray-400">
+                    Email
+                  </p>
+
+                  <p className="mt-1 text-sm font-medium text-gray-800">
+                    noorzaessentials@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
+                  <MapPin size={19} className="text-[#c89116]" />
+                </div>
+
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-gray-400">
+                    Address
+                  </p>
+
+                  <p className="mt-1 text-sm font-medium text-gray-800">
+                    E Block, No. 94, Satellite Town, Rawalpindi
+                  </p>
+                </div>
+              </div>
+              ```
               {/* SUPPORT */}
               <div className="flex items-center gap-4 p-5 rounded-2xl border border-gray-100 bg-gray-50">
                 <div className="w-11 h-11 shrink-0 rounded-xl bg-[#faf8f3] flex items-center justify-center">
