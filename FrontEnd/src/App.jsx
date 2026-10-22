@@ -27,7 +27,6 @@ const Delivery = lazy(() => import("./Pages/Delivery"));
 const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy"));
 const RefundPolicy = lazy(() => import("./Pages/RefundPolicy"));
 const PaymentPolicy = lazy(() => import("./Pages/PaymentPolicy"));
-const TermsandConditions = lazy(() => import("./Pages/TermsandConditions"));
 const OrderSuccess = lazy(() => import("./Pages/OrderSuccess"));
 const OrderTracking = lazy(() => import("./Pages/OrderTracking"));
 
@@ -77,10 +76,6 @@ const App = () => {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/payment-policy" element={<PaymentPolicy />} />
-              <Route
-                path="/terms-and-conditions"
-                element={<TermsandConditions />}
-              />
               <Route path="/order-success" element={<OrderSuccess />} />
               <Route path="/track-order/:orderId" element={<OrderTracking />} />
             </Routes>

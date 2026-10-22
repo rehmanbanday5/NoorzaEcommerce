@@ -186,7 +186,7 @@ const statusColors = [
             <p className="text-sm text-gray-500">
               Current Status:{" "}
               <span className="font-semibold text-[#8A6500]">
-                {order.status}
+                {order.status === "Delivery" ? "Delivered" : order.status}
               </span>
             </p>
           </div>
@@ -278,6 +278,64 @@ const statusColors = [
           </div>
         </div>
 
+        {/* ================= PAYMENT STATUS ================= */}
+        <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+            Payment Status
+          </p>
+
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm text-gray-500">Payment Method</p>
+              <p className="mt-1 font-semibold text-gray-900">
+                {order.paymentMethod === "COD"
+                  ? "Cash On Delivery"
+                  : order.paymentMethod}
+              </p>
+            </div>
+
+            {order.paymentMethod === "COD" ? (
+              <span className="inline-flex w-fit rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700">
+                Pay on Delivery
+              </span>
+            ) : (
+              <span
+                className={`inline-flex w-fit rounded-full px-4 py-2 text-sm font-semibold ${
+                  order.paymentStatus === "Verified"
+                    ? "bg-green-100 text-green-700"
+                    : order.paymentStatus === "Rejected"
+                      ? "bg-red-100 text-red-700"
+                      : "bg-amber-100 text-amber-700"
+                }`}
+              >
+                {order.paymentStatus === "Verified"
+                  ? "Payment Successful"
+                  : order.paymentStatus === "Rejected"
+                    ? "Payment Unsuccessful"
+                    : "Payment Pending"}
+              </span>
+            )}
+          </div>
+
+          {order.paymentMethod !== "COD" && (
+            <>
+              <div className="mt-4 border-t border-gray-100 pt-4">
+                <p className="text-xs text-gray-500">Transaction ID</p>
+                <p className="mt-1 break-all text-sm font-medium text-gray-900">
+                  {order.transactionId || "Not provided"}
+                </p>
+              </div>
+
+              {order.paymentStatus !== "Verified" &&
+                order.paymentStatus !== "Rejected" && (
+                  <p className="mt-3 text-xs leading-5 text-gray-500">
+                    Your payment is awaiting verification by Noorza.
+                  </p>
+                )}
+            </>
+          )}
+        </div>
+
         {/* ================= ORDER DETAILS ================= */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* DELIVERY ADDRESS */}
@@ -312,11 +370,13 @@ const statusColors = [
                 </span>
               </div>
 
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-gray-500">Payment</span>
 
-                <span className="font-medium text-gray-900">
-                  Cash On Delivery
+                <span className="text-right font-medium text-gray-900">
+                  {order.paymentMethod === "COD"
+                    ? "Cash On Delivery"
+                    : order.paymentMethod}
                 </span>
               </div>
 

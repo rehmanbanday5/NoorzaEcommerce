@@ -111,14 +111,6 @@ const Footer = () => {
                   Payment Policy
                 </a>
               </li>
-              <li>
-                <a
-                  href="/terms-and-conditions"
-                  className="hover:text-[#8A6500] transition"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
             </ul>
           </div>
 

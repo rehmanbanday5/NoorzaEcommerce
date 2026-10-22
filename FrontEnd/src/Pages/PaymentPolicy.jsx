@@ -47,20 +47,6 @@ const PaymentPolicy = () => {
           <p className="text-sm text-gray-500 mt-2">Pay through Easypaisa.</p>
         </div>
 
-        {/* JazzCash */}
-        <div className="border border-gray-200 rounded-xl p-6 flex flex-col items-center text-center hover:border-[#c89116] transition-colors">
-          <div className="h-16 flex items-center justify-center">
-            <img
-              src={assets.jazzcash}
-              alt="JazzCash"
-              className="max-w-[140px] max-h-16 object-contain"
-            />
-          </div>
-
-          <h2 className="font-medium text-gray-900 mt-3">JazzCash</h2>
-
-          <p className="text-sm text-gray-500 mt-2">Pay through JazzCash.</p>
-        </div>
 
         {/* Bank Transfer */}
         <div className="border border-gray-200 rounded-xl p-6 flex flex-col items-center text-center hover:border-[#c89116] transition-colors">

@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
-import Title from "../Components/Title";
+import { useContext, useEffect, useState } from "react";
 import CartTotal from "../Components/CartTotal";
 import { ShopContext } from "../Context/ShopContext";
 import axios from "axios";
 import { toast } from "../utils/notifications";
-import { Banknote, Smartphone, Landmark, Check } from "lucide-react";
+import { Banknote, Smartphone, Landmark, Check, Copy } from "lucide-react";
 
 const paymentMethods = [
   {
@@ -17,12 +16,6 @@ const paymentMethods = [
     id: "easypaisa",
     title: "Easypaisa",
     description: "Pay using your Easypaisa account",
-    icon: Smartphone,
-  },
-  {
-    id: "jazzcash",
-    title: "JazzCash",
-    description: "Pay using your JazzCash account",
     icon: Smartphone,
   },
   {
@@ -39,6 +32,9 @@ const inputClass =
 const PlaceOrder = () => {
   const [method, setMethod] = useState("cod");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [paymentInfo, setPaymentInfo] = useState({});
+  const [isLoadingPaymentInfo, setIsLoadingPaymentInfo] = useState(true);
+  const [transactionId, setTransactionId] = useState("");
 
   const {
     navigate,
@@ -61,6 +57,32 @@ const PlaceOrder = () => {
     phone: "",
   });
 
+  useEffect(() => {
+    let isActive = true;
+
+    const fetchPaymentInfo = async () => {
+      try {
+        const response = await axios.get(
+          backendUrl + "/api/order/payment-info",
+        );
+
+        if (isActive && response.data.success) {
+          setPaymentInfo(response.data.paymentInfo || {});
+        }
+      } catch (error) {
+        console.error("Unable to load payment details:", error);
+      } finally {
+        if (isActive) setIsLoadingPaymentInfo(false);
+      }
+    };
+
+    fetchPaymentInfo();
+
+    return () => {
+      isActive = false;
+    };
+  }, [backendUrl]);
+
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
 
@@ -70,32 +92,78 @@ const PlaceOrder = () => {
     }));
   };
 
+const selectedPaymentMethod =
+  method === "cod" ? "COD" : method === "bank" ? "Bank Transfer" : "Easypaisa";
+
+  const selectedPaymentInfo = paymentInfo[selectedPaymentMethod];
+  const isManualPayment = method !== "cod";
+
+  const hasPaymentDetails =
+    method === "bank"
+      ? Boolean(
+          selectedPaymentInfo?.accountTitle &&
+          (selectedPaymentInfo?.iban || selectedPaymentInfo?.accountNumber) &&
+          selectedPaymentInfo?.bankName,
+        )
+      : Boolean(
+          selectedPaymentInfo?.accountTitle &&
+          selectedPaymentInfo?.accountNumber,
+        );
+
+  const copyToClipboard = async (value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      toast.success("Copied to clipboard.");
+    } catch {
+      toast.error("Could not copy. Please copy the details manually.");
+    }
+  };
+
   const onSubmitHandler = async (event) => {
     event.preventDefault();
 
-    if (method !== "cod") {
-      toast.error(
-        "This payment method is not available yet. Please select Cash on Delivery.",
-      );
+    if (isSubmitting) return;
+
+    if (!token) {
+      toast.error("Please log in before placing your order.");
       return;
     }
 
-    if (isSubmitting) return;
+    if (isManualPayment) {
+      if (isLoadingPaymentInfo) {
+        toast.error("Please wait while payment details load.");
+        return;
+      }
+
+      if (!hasPaymentDetails) {
+        toast.error(
+          "Payment details are not configured yet. Please choose Cash on Delivery.",
+        );
+        return;
+      }
+
+      if (!transactionId.trim()) {
+        toast.error("Please enter your payment transaction ID.");
+        return;
+      }
+    }
 
     setIsSubmitting(true);
 
     try {
       const orderItems = [];
 
-      for (const items in cartItems) {
-        for (const item in cartItems[items]) {
-          if (cartItems[items][item] > 0) {
-            const product = products.find((product) => product._id === items);
+      for (const productId in cartItems) {
+        for (const size in cartItems[productId]) {
+          if (cartItems[productId][size] > 0) {
+            const product = products.find(
+              (product) => product._id === productId,
+            );
 
             if (product) {
               const itemInfo = structuredClone(product);
-              itemInfo.size = item;
-              itemInfo.quantity = cartItems[items][item];
+              itemInfo.size = size;
+              itemInfo.quantity = cartItems[productId][size];
               orderItems.push(itemInfo);
             }
           }
@@ -111,6 +179,8 @@ const PlaceOrder = () => {
         address: formData,
         items: orderItems,
         amount: getCartAmount() + delivery_fee,
+        paymentMethod: selectedPaymentMethod,
+        transactionId: isManualPayment ? transactionId.trim() : "",
       };
 
       const response = await axios.post(
@@ -121,6 +191,11 @@ const PlaceOrder = () => {
 
       if (response.data.success) {
         setCartItems({});
+    toast.success(
+      isManualPayment
+        ? "Order submitted. Payment is awaiting verification."
+        : "Order placed successfully.",
+    );
         navigate("/orders");
       } else {
         toast.error(response.data.message || "Unable to place your order.");
@@ -143,7 +218,6 @@ const PlaceOrder = () => {
       className="min-h-screen bg-[#faf9f6] px-4 py-8 sm:px-6 sm:py-12 lg:px-8"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-        {/* LEFT: Delivery Information */}
         <div className="space-y-7">
           <section className="rounded-xl border border-gray-100 bg-white p-5 sm:p-7">
             <div className="mb-6">
@@ -314,7 +388,6 @@ const PlaceOrder = () => {
           </section>
         </div>
 
-        {/* RIGHT: Order Summary and Payment */}
         <div className="space-y-7 lg:sticky lg:top-6">
           <section className="rounded-xl border border-gray-100 bg-white p-5 sm:p-7">
             <div className="mb-5">
@@ -325,7 +398,6 @@ const PlaceOrder = () => {
                 Order summary
               </h2>
             </div>
-
             <CartTotal />
           </section>
 
@@ -389,19 +461,132 @@ const PlaceOrder = () => {
               })}
             </div>
 
-            {method !== "cod" && (
-              <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-800">
-                This payment method is not available yet. Select Cash on
-                Delivery to place your order.
-              </p>
+            {isManualPayment && (
+              <div className="mt-5 rounded-lg border border-gray-200 bg-gray-50 p-4">
+                <h3 className="font-semibold text-gray-900">
+                  {selectedPaymentMethod} payment details
+                </h3>
+
+                {isLoadingPaymentInfo ? (
+                  <p className="mt-3 text-sm text-gray-500">
+                    Loading payment details...
+                  </p>
+                ) : !hasPaymentDetails ? (
+                  <p className="mt-3 text-sm leading-6 text-amber-800">
+                    Payment account details have not been configured yet. Please
+                    select Cash on Delivery or try again later.
+                  </p>
+                ) : (
+                  <>
+                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                      Transfer the exact order amount using the details below.
+                      Enter your transaction reference after making the
+                      transfer.
+                    </p>
+
+                    {selectedPaymentMethod === "Bank Transfer" && (
+                      <p className="mt-4 text-sm text-gray-700">
+                        <span className="font-medium">Bank:</span>{" "}
+                        {selectedPaymentInfo.bankName}
+                      </p>
+                    )}
+
+                    <div className="mt-4 space-y-3">
+                      <div>
+                        <p className="text-xs text-gray-500">Account title</p>
+                        <p className="break-words text-sm font-medium text-gray-900">
+                          {selectedPaymentInfo.accountTitle}
+                        </p>
+                      </div>
+
+                      {selectedPaymentInfo.accountNumber && (
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="min-w-0">
+                            <p className="text-xs text-gray-500">
+                              Account number
+                            </p>
+                            <p className="break-all text-sm font-medium text-gray-900">
+                              {selectedPaymentInfo.accountNumber}
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              copyToClipboard(selectedPaymentInfo.accountNumber)
+                            }
+                            aria-label="Copy account number"
+                            className="rounded-md border border-gray-200 bg-white p-2 text-gray-600 hover:text-[#a7770d]"
+                          >
+                            <Copy size={16} />
+                          </button>
+                        </div>
+                      )}
+
+                      {selectedPaymentInfo.iban && (
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="min-w-0">
+                            <p className="text-xs text-gray-500">IBAN</p>
+                            <p className="break-all text-sm font-medium text-gray-900">
+                              {selectedPaymentInfo.iban}
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              copyToClipboard(selectedPaymentInfo.iban)
+                            }
+                            aria-label="Copy IBAN"
+                            className="rounded-md border border-gray-200 bg-white p-2 text-gray-600 hover:text-[#a7770d]"
+                          >
+                            <Copy size={16} />
+                          </button>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="mt-4 border-t border-gray-200 pt-4">
+                      <label
+                        htmlFor="transactionId"
+                        className="mb-2 block text-sm font-medium text-gray-700"
+                      >
+                        Transaction ID / reference
+                      </label>
+                      <input
+                        id="transactionId"
+                        type="text"
+                        required
+                        value={transactionId}
+                        onChange={(event) =>
+                          setTransactionId(event.target.value)
+                        }
+                        className={inputClass}
+                        placeholder="Enter your transaction reference"
+                        autoComplete="off"
+                      />
+                      <p className="mt-2 text-xs leading-5 text-gray-500">
+                        Your payment will remain pending until Noorza verifies
+                        that the funds have arrived.
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
             )}
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={
+                isSubmitting ||
+                (isManualPayment &&
+                  (isLoadingPaymentInfo || !hasPaymentDetails))
+              }
               className="mt-6 w-full rounded-lg bg-[#c89116] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#ad7d0f] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isSubmitting ? "Placing order..." : "Place Order"}
+              {isSubmitting
+                ? "Placing order..."
+                : isManualPayment
+                  ? "Submit Order & Payment Reference"
+                  : "Place Order"}
             </button>
           </section>
         </div>

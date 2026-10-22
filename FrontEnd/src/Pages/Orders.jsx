@@ -157,12 +157,39 @@ const Orders = () => {
                   <div key={index} className="group p-4 sm:p-6">
                     <div className="flex items-center gap-4 sm:gap-6">
                       {/* PRODUCT IMAGE */}
-                      <div className="relative shrink-0 overflow-hidden rounded-2xl bg-[#f8f8f6]">
+                      <div className="w-36 h-40 sm:w-44 sm:h-48 flex-shrink-0 rounded-xl bg-gray-50 flex items-center justify-center overflow-hidden">
                         <img
-                          src={item.image?.[0]}
+                          src={
+                            Array.isArray(item.image)
+                              ? item.image[0]
+                              : item.image
+                          }
                           alt={item.name}
-                          className="h-28 w-24 sm:h-36 sm:w-30 object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full object-contain"
                         />
+                      </div>
+
+                      {/* TRACK THIS ORDER BUTTON */}
+                      <div className="flex justify-center border-t border-gray-100 bg-[#faf9f6] p-4 sm:p-5 mt-0">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            navigate(`/track-order/${order._id}`, {
+                              state: { order },
+                            })
+                          }
+                          className="group relative overflow-hidden rounded-xl bg-[#111111] px-10 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-[#c89116] hover:text-black hover:shadow-xl"
+                        >
+                          <span className="relative block overflow-hidden h-[20px]">
+                            <span className="block transition-transform duration-500 ease-out group-hover:-translate-y-full">
+                              Track Your Order
+                            </span>
+
+                            <span className="absolute left-0 top-full block transition-transform duration-500 ease-out group-hover:-translate-y-full">
+                              Track Your Order
+                            </span>
+                          </span>
+                        </button>
                       </div>
 
                       {/* PRODUCT INFORMATION */}
@@ -224,28 +251,6 @@ const Orders = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* ================= TRACK BUTTON ================= */}
-        <div className="flex justify-center mt-10 sm:mt-12">
-          <button
-            onClick={() =>
-              navigate(`/track-order/${orders[0]._id}`, {
-                state: { order: orders[0] },
-              })
-            }
-            className="group relative overflow-hidden rounded-xl bg-[#111111] px-10 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:bg-[#c89116] hover:text-black hover:shadow-xl"
-          >
-            <span className="relative block overflow-hidden h-[20px]">
-              <span className="block transition-transform duration-500 ease-out group-hover:-translate-y-full">
-                Track Your Order
-              </span>
-
-              <span className="absolute left-0 top-full block transition-transform duration-500 ease-out group-hover:-translate-y-full">
-                Track Your Order
-              </span>
-            </span>
-          </button>
         </div>
       </div>
     </div>
