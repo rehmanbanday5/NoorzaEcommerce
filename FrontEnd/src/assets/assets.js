@@ -25,6 +25,10 @@ import menu_icon from './menu_icon.svg'
 import about from './about.webp'
 import Contact from './Contact.webp'
 import cross_icon from './cross_icon.svg'
+import Review1 from './Review1.webp'
+import Review2 from './Review2.webp'
+import Review3 from './Review3.webp'
+import Review4 from './Review4.webp'
 
 export const assets = {
   Noorza,
@@ -54,5 +58,9 @@ export const assets = {
   about,
   Contact,
   cross_icon,
+  Review1,
+  Review2,
+  Review3,
+  Review4
 };
 

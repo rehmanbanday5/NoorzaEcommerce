@@ -4,59 +4,31 @@ import { assets } from "../assets/assets";
 const reviews = [
   {
     id: 1,
-    image: assets.BraCategory,
-    text: "Beautiful quality and a lovely shopping experience. The product feels comfortable and the finishing is excellent.",
-    rating: 3,
-    customerName: "Ayesha K.",
+    image: assets.Review1,
+    text: "Honestly, mujhe dress ki quality kaafi achi lagi. Fabric soft hai aur stitching bhi neat hai. Jo pictures mein dekha tha, dress almost waisa hi mila. Overall, really happy with my purchase",
+    rating: 5,
+    customerName: "Hoorain Shah",
   },
   {
     id: 2,
-    image: assets.LingerieCategory,
-    text: "I really appreciate the attention to detail. The overall quality and presentation exceeded my expectations.",
+    image: assets.Review2,
+    text: "I wasn't expecting it to look this pretty in real life! The color is beautiful and the overall finishing is really nice. Definitely something I'd love to wear again.",
     rating: 5,
-    customerName: "Sana M.",
+    customerName: "Eshal Mirza",
   },
   {
     id: 3,
-    image: assets.BraSets,
-    text: "A lovely experience from start to finish. The product looks beautiful and feels thoughtfully made.",
+    image: assets.Review3,
+    text: "I really liked the attention to detail. The stitching, color and overall look were lovely. It's not easy to find something that looks elegant without being too much.",
     rating: 5,
-    customerName: "Hira A.",
+    customerName: "Zimal Awan",
   },
   {
     id: 4,
-    image: assets.NightWear,
-    text: "Really happy with the overall experience. The product presentation and attention to detail are impressive.",
+    image: assets.Review4,
+    text: "The best part for me was how comfortable it felt. The design is simple but elegant, and it looks even better when styled properly.",
     rating: 5,
-    customerName: "Mariam R.",
-  },
-  {
-    id: 5,
-    image: assets.NightWear,
-    text: "Really happy with the overall experience. The product presentation and attention to detail are impressive.",
-    rating: 5,
-    customerName: "Mariam R.",
-  },
-  {
-    id: 6,
-    image: assets.NightWear,
-    text: "Really happy with the overall experience. The product presentation and attention to detail are impressive.",
-    rating: 5,
-    customerName: "Mariam R.",
-  },
-  {
-    id: 7,
-    image: assets.NightWear,
-    text: "Really happy with the overall experience. The product presentation and attention to detail are impressive.",
-    rating: 5,
-    customerName: "Mariam R.",
-  },
-  {
-    id: 8,
-    image: assets.NightWear,
-    text: "Really happy with the overall experience. The product presentation and attention to detail are impressive.",
-    rating: 5,
-    customerName: "Mariam R.",
+    customerName: "Mariam Khan",
   },
 ];
 
@@ -168,14 +140,14 @@ const ReviewSection = () => {
               data-review-card
               className="min-w-[78%] sm:min-w-[40%] lg:min-w-[24%] snap-start bg-white border border-[#c89116]/15 flex flex-col"
             >
-              {/* Compact Product Photo */}
-              <div className="aspect-[5/3] overflow-hidden bg-[#f1eee7]">
+              {/* Product Photo */}
+              <div className="aspect-[3/4] w-full overflow-hidden bg-white">
                 <img
                   src={review.image}
                   alt="Product photo for customer review"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover"
+                  className="block w-full h-full object-contain"
                 />
               </div>
 
@@ -192,7 +164,7 @@ const ReviewSection = () => {
                   ))}
                 </div>
 
-                <blockquote className="text-xs sm:text-sm leading-5 text-gray-600 flex-1 line-clamp-3">
+                <blockquote className="text-xs sm:text-sm leading-relaxed text-gray-600 flex-1 break-words whitespace-normal">
                   “{review.text}”
                 </blockquote>
 
