@@ -104,11 +104,11 @@ const Product = () => {
 
               {/* MAIN IMAGE */}
 
-              <div className="flex-1 bg-[#f8f8f6] rounded-2xl overflow-hidden">
+              <div className="flex-1 min-w-0 rounded-2xl overflow-hidden">
                 <img
                   src={image}
                   alt={productData.name}
-                  className="w-full aspect-[4/5] object-cover"
+                  className="block w-full aspect-[4/5] object-contain"
                 />
               </div>
             </div>

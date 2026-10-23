@@ -101,10 +101,6 @@ const Contact = () => {
                   <p className="text-[10px] uppercase tracking-[0.18em] font-bold text-gray-400">
                     Address
                   </p>
-
-                  <p className="mt-1 text-sm font-medium text-gray-800">
-                    E Block, No. 94, Satellite Town, Rawalpindi
-                  </p>
                 </div>
               </div>
               

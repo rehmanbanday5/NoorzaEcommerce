@@ -58,8 +58,9 @@ const Add = ({ token }) => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.log(error);
-      toast.error(error.message);
+      console.log("Product Add Error:", error);
+      console.log("Backend Response:", error.response?.data);
+      toast.error(error.response?.data?.message || error.message);
     }
   };
 

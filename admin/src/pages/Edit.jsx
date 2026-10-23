@@ -23,7 +23,7 @@ const Edit = ({ token }) => {
 
   const categories = ["Bra", "Bra Sets", "Lingerie", "Nightwear", "Shop All"];
 
-  const availableSizes = ["S", "M", "L", "XL", "XXL"];
+ const availableSizes = ['Small (36-38")', 'Medium (38-40")', 'Large (40-42")'];
 
   // ================= GET PRODUCT =================
 
@@ -58,8 +58,11 @@ const Edit = ({ token }) => {
         navigate("/list");
       }
     } catch (error) {
-      console.log(error);
-      toast.error(error.message);
+      console.log("Product Update Error:", error);
+      console.log("Backend Response:", error.response?.data);
+
+      toast.error(error.response?.data?.message || error.message);
+
       navigate("/list");
     } finally {
       setLoading(false);
@@ -132,11 +135,14 @@ const Edit = ({ token }) => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.log(error);
-      toast.error(error.message);
+      console.log("Product Update Error:", error);
+      console.log("Backend Response:", error.response?.data);
+
+      toast.error(error.response?.data?.message || error.message);
     } finally {
       setSaving(false);
     }
+
   };
 
   // ================= LOADING =================
